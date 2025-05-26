@@ -1,0 +1,41 @@
+.custom-navbar {
+  background-color: #000;
+  padding: 0;
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    .nav-link {
+      //   @include font(white, $jakarta-sans-semibold, $fs-16, 500);
+      color: white;
+      font-size: $fs-16;
+      font-weight: $fw-600;
+      line-height: 126%;
+      text-transform: uppercase;
+      margin-right: 4.5rem;
+      padding: 2.5rem 2.5rem;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $red-92d;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 3px;
+      }
+      &.active {
+        background-color: $red-92d;
+      }
+    }
+  }
+}
