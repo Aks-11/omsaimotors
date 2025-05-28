@@ -1,0 +1,16 @@
+@import '@fontsource/plus-jakarta-sans'; // Default weight 400
+
+html {
+  font-size: 100%;
+  scroll-behavior: unset;
+
+  body {
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 1.7;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    font-size: $fs-18;
+  }
+}
