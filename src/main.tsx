@@ -6,7 +6,10 @@ import App from './App.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap Bundle JS
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+// All custom CSS
 import './css/styles.scss';
+// Swiper CSS
+import 'swiper/swiper-bundle.css';
 import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')!).render(

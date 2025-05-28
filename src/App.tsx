@@ -1,12 +1,16 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import MainContent from './layouts';
+import Home from './pages/home';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<MainContent />}></Route>
+        <Route element={<MainContent />}>
+          <Route index element={<Navigate replace to='home' />}></Route>
+          <Route path='home' element={<Home />}></Route>
+        </Route>
       </Routes>
     </>
   );

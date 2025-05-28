@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <nav className='navbar custom-navbar'>
         <div className='container'>
-          <NavLink to=''>
+          <NavLink to='/home'>
             <img src={OmSaiMotorsLogo} alt='Om Sai Motors' />
           </NavLink>
           <div className='navbar-nav'>
