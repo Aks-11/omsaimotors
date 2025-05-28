@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import type { CarouselItem } from '../schemas/carousel';
-import { useState } from 'react';
 import RightArrow from '../assets/icons/right-arrow.png';
 import LeftArrow from '../assets/icons/left-arrow.png';
 
