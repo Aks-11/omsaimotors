@@ -8,7 +8,8 @@ $inter-medium: 'Inter Medium';
 $inter-semibold: 'Inter SemiBold';
 $inter-bold: 'Inter Bold';
 
-$main-font: $jakarta-sans;
+$primary-font: $jakarta-sans;
+$secondary-font: $inter;
 
 // Font sizes
 $fs-8: 0.5rem;
@@ -29,6 +30,7 @@ $fs-26: 1.625rem;
 $fs-25: 1.563rem;
 $fs-28: 1.75rem;
 $fs-30: 1.875rem;
+$fs-40: 2.5rem;
 $fs-48: 3rem;
 
 // Font weights
@@ -53,3 +55,6 @@ $grey-de: #dedede;
 $grey-bf: #bfbfbf;
 $grey-8c: #8c8c8c;
 $blue-1e8: #4d81e8;
+
+// Components
+$navbar-height: 80px;

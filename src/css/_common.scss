@@ -1,0 +1,44 @@
+.secondary-font {
+  font-family: $secondary-font;
+}
+
+// Font classes
+.fw-100 {
+  font-weight: $fw-100;
+}
+.fw-200 {
+  font-weight: $fw-200;
+}
+.fw-300 {
+  font-weight: $fw-300;
+}
+.fw-400 {
+  font-weight: $fw-400;
+}
+.fw-500 {
+  font-weight: $fw-500;
+}
+.fw-600 {
+  font-weight: $fw-600;
+}
+.fw-700 {
+  font-weight: $fw-700;
+}
+.fw-800 {
+  font-weight: $fw-800;
+}
+
+// Button styles
+.btn {
+  background-color: $red-92d;
+  color: white;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: $fs-18;
+  border-radius: 0%;
+  padding: 0.5rem 1.5rem;
+}
+.btn:hover {
+  color: white;
+  background-color: darken($red-92d, 10%);
+}

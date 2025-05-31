@@ -1,11 +1,12 @@
-@import '@fontsource/plus-jakarta-sans'; // Default weight 400
+@import '@fontsource/plus-jakarta-sans';
+@import '@fontsource/inter';
 
 html {
   font-size: 100%;
   scroll-behavior: unset;
 
   body {
-    font-family: $main-font;
+    font-family: $primary-font;
     font-weight: 400;
     line-height: 1.7;
     box-sizing: border-box;

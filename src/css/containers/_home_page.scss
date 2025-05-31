@@ -2,7 +2,103 @@
   .carousel-container {
     position: relative;
     .my-swiper {
-      height: calc(100vh - 80px);
+      height: calc(100vh - $navbar-height);
+    }
+  }
+
+  .action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 10px 0;
+    height: 70px;
+    .act-btn {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: unset;
+      .action-text {
+        font-family: $secondary-font;
+        color: $white-e1;
+        font-weight: 700;
+        font-size: $fs-18;
+        line-height: 200%;
+      }
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $red-92d;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
+      }
+    }
+    .vertical-separator {
+      height: 3rem;
+      width: 2px;
+      background-color: $white-e1;
+    }
+  }
+
+  .book-service {
+    padding: 7rem 10rem;
+    text-align: center;
+    .service-heading {
+      color: $grey-97;
+      font-size: $fs-40;
+      font-weight: 600;
+      line-height: 150%;
+      .red-text {
+        color: $red-92d;
+      }
+    }
+    .service-steps {
+      margin: 8rem 0;
+      display: flex;
+      justify-content: space-evenly;
+      .bg-grey {
+        width: 100%;
+        max-width: 176px;
+        height: 100%;
+        max-height: 150px;
+        padding: 22px;
+        background-color: $grey-f0;
+        box-shadow: 0 3px 4px 1px $grey-7a66;
+        border-radius: 9px;
+        .step-img {
+          box-shadow: 0 3px 4px 1px $grey-7a66;
+          &.clock {
+            border-radius: 71px;
+            margin-top: 5px;
+          }
+          &.mobile {
+            border-radius: 15px;
+          }
+          &.calendar {
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    .steps-container {
+      .steps-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        .step-description {
+          text-wrap: nowrap;
+          color: $grey-97;
+          font-size: $fs-20;
+          font-weight: 500;
+          line-height: 250%;
+        }
+        .spanner {
+          margin-inline: 20px;
+        }
+      }
+      .btn {
+        width: 700px;
+      }
     }
   }
 }
