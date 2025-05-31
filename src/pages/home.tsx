@@ -6,6 +6,11 @@ import MobilePhone from '../assets/homePage/mobile.png';
 import Calendar from '../assets/homePage/calendar.png';
 import Clock from '../assets/homePage/clock.png';
 import SpannerIcon from '../assets/icons/spanner.svg';
+import PulsarN150 from '../assets/bikes/pulsar-n150.png';
+import Pulsar250 from '../assets/bikes/pulsar-250.png';
+import Avenger220 from '../assets/bikes/avenger-220.png';
+import Dominar400 from '../assets/bikes/dominar-400.png';
+import AdBanner from '../assets/bikes/ad-banner.png';
 
 function Home() {
   return (
@@ -52,6 +57,58 @@ function Home() {
             </div>
             <div className='mt-3'>
               <button className='btn'>Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div className='banners-container'>
+          <div className='row'>
+            <div className='col-7'>
+              <img
+                src={PulsarN150}
+                alt='Pulsar N150'
+                className='banner-imgs'
+                width='750'
+                height='auto'
+              />
+            </div>
+            <div className='col-5'>
+              <img
+                src={Pulsar250}
+                alt='Pulsar 220'
+                className='banner-imgs'
+                width='530'
+                height='auto'
+              />
+            </div>
+          </div>
+          <div className='row mt-4'>
+            <div className='col-4'>
+              <img
+                src={Avenger220}
+                alt='Avenger 220'
+                className='banner-imgs'
+                width='420'
+                height='auto'
+              />
+            </div>
+            <div className='col-4'>
+              <img
+                src={Dominar400}
+                alt='Dominar 400'
+                className='banner-imgs'
+                width='420'
+                height='auto'
+              />
+            </div>
+            <div className='col-4'>
+              <img
+                src={AdBanner}
+                alt='republic day'
+                className='banner-imgs'
+                width='420'
+                height='auto'
+              />
             </div>
           </div>
         </div>
