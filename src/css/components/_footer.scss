@@ -1,0 +1,105 @@
+.main-footer-container {
+  padding: 70px;
+  background-color: $grey-f0;
+  .footer-row {
+    margin-bottom: 4rem;
+    .footer-col {
+      .col-heading {
+        color: $black;
+        font-size: $fs-20;
+        font-weight: 700;
+        line-height: 150%;
+        margin-bottom: 2rem;
+      }
+      .footer-links {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+          margin-bottom: 1rem;
+          .foot-link {
+            color: $black;
+            font-family: $secondary-font;
+            font-size: $fs-16;
+            font-weight: 500;
+            line-height: 150%;
+            text-decoration: none;
+          }
+          &.location {
+            background-color: $grey-de;
+            padding: 8px 10px;
+            border-radius: 6px;
+            width: fit-content;
+          }
+          a.foot-link {
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 1px;
+            }
+          }
+          p {
+            margin: 0;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .about-us {
+      padding: 20px;
+      background-color: $grey-de;
+      border-radius: 10px;
+      height: fit-content;
+      p {
+        color: $black;
+        font-family: $secondary-font;
+        font-size: $fs-16;
+        font-weight: 500;
+        line-height: 140%;
+        margin-bottom: 1.5rem;
+      }
+      a {
+        color: $black;
+        font-family: $secondary-font;
+        font-size: $fs-14;
+        font-weight: 700;
+        line-height: 140%;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .social-links {
+    padding-top: 16px;
+    border-top: 2px solid $grey-de;
+    .social-row {
+      justify-content: space-between;
+      .copyright {
+        color: $black;
+        font-family: $secondary-font;
+        font-size: $fs-16;
+        font-weight: 500;
+        line-height: 140%;
+        text-transform: uppercase;
+        span {
+          font-size: $fs-18;
+        }
+      }
+      .social-media {
+        display: flex;
+        justify-content: end;
+        .social-icon {
+          padding: 3px 8px 8px 8px;
+          background-color: $grey-de;
+          border-radius: 10px;
+          margin-right: 15px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

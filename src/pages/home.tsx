@@ -11,8 +11,11 @@ import Pulsar250 from '../assets/homePage/bikes/pulsar-250.png';
 import Avenger220 from '../assets/homePage/bikes/avenger-220.png';
 import Dominar400 from '../assets/homePage/bikes/dominar-400.png';
 import AdBanner from '../assets/homePage/bikes/ad-banner.png';
+import BookServicePulsar from '../assets/homePage/bikes/pulsar-sideview.png';
+import DownArrowIcon from '../assets/icons/down-arrow.svg';
 import BikeList from '../components/bikeList';
 import { bikeData } from '../data/bikeData';
+import Footer from '../layouts/footer';
 
 function Home() {
   return (
@@ -117,6 +120,37 @@ function Home() {
 
         <div className='mt-5'>
           <BikeList bikes={bikeData} />
+        </div>
+
+        <div className='book-service-container'>
+          <div className='row mx-0'>
+            <div className='col-8'>
+              <img src={BookServicePulsar} alt='Pulsar' width='100%' height='auto' />
+            </div>
+            <div className='col-4 d-flex align-items-center justify-content-center'>
+              <div className='book-slot'>
+                <div className='desc-text'>
+                  <p className='big-text'>Your</p>
+                  <p>date</p>
+                </div>
+                <div className='arrow'>
+                  <img src={DownArrowIcon} alt='Arrow' height='75px' width='auto' />
+                </div>
+                <div className='desc-text'>
+                  <p className='big-text'>Your</p>
+                  <p>slot</p>
+                </div>
+                <div className='service-cta'>
+                  <p className='description'>Get your best bike service with US</p>
+                  <button className='btn'>Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='mt-5'>
+          <Footer />
         </div>
       </div>
     </>

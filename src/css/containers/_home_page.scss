@@ -112,4 +112,47 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   }
+
+  .book-service-container {
+    background-color: $black;
+    .col-4,
+    .col-8 {
+      padding: 0;
+    }
+    .book-slot {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      .desc-text {
+        color: $white;
+        font-size: $fs-38;
+        font-weight: 700;
+        line-height: 150%;
+        text-transform: uppercase;
+        .big-text {
+          font-size: $fs-50;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+      .arrow {
+        margin: 8px 0;
+      }
+    }
+    .service-cta {
+      width: 85%;
+      margin-top: 40px;
+      .description {
+        color: $white;
+        font-size: $fs-20;
+        font-weight: 700;
+        line-height: 150%;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
 }
