@@ -3,12 +3,23 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import type { CarouselItem } from '../schemas/carousel';
 import RightArrow from '../assets/icons/right-arrow.png';
 import LeftArrow from '../assets/icons/left-arrow.png';
+import { useRef } from 'react';
 
 interface IProps {
   items: CarouselItem[];
 }
 
 function CustomCarousel({ items }: IProps) {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const handleSlideChange = () => {
+    videoRefs.current.forEach((video) => {
+      if (video && !video.paused) {
+        video.pause();
+      }
+    });
+  };
+
   return (
     <div className='custom-carousel'>
       <Swiper
@@ -22,6 +33,7 @@ function CustomCarousel({ items }: IProps) {
         slidesPerView={1}
         autoplay={{ delay: 5000, disableOnInteraction: true }}
         className='my-swiper my-swiper-video'
+        onSlideChange={handleSlideChange}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
@@ -29,6 +41,7 @@ function CustomCarousel({ items }: IProps) {
               <img src={item.source} alt={`Slide ${index + 1}`} />
             ) : (
               <video
+                ref={(el) => { videoRefs.current[index] = el; }}
                 controls
                 src={item.source}
                 autoPlay

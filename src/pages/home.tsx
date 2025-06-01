@@ -6,11 +6,13 @@ import MobilePhone from '../assets/homePage/mobile.png';
 import Calendar from '../assets/homePage/calendar.png';
 import Clock from '../assets/homePage/clock.png';
 import SpannerIcon from '../assets/icons/spanner.svg';
-import PulsarN150 from '../assets/bikes/pulsar-n150.png';
-import Pulsar250 from '../assets/bikes/pulsar-250.png';
-import Avenger220 from '../assets/bikes/avenger-220.png';
-import Dominar400 from '../assets/bikes/dominar-400.png';
-import AdBanner from '../assets/bikes/ad-banner.png';
+import PulsarN150 from '../assets/homePage/bikes/pulsar-n150.png';
+import Pulsar250 from '../assets/homePage/bikes/pulsar-250.png';
+import Avenger220 from '../assets/homePage/bikes/avenger-220.png';
+import Dominar400 from '../assets/homePage/bikes/dominar-400.png';
+import AdBanner from '../assets/homePage/bikes/ad-banner.png';
+import BikeList from '../components/bikeList';
+import { bikeData } from '../data/bikeData';
 
 function Home() {
   return (
@@ -111,6 +113,10 @@ function Home() {
               />
             </div>
           </div>
+        </div>
+
+        <div className='mt-5'>
+          <BikeList bikes={bikeData} />
         </div>
       </div>
     </>
