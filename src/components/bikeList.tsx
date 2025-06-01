@@ -14,12 +14,7 @@ function BikeList({ bikes }: IProps) {
           <div className='row'>
             <div className='col-7'>
               <div className='bike-img'>
-                <img
-                  src={bike.image}
-                  alt={bike.name}
-                  width='100%'
-                  height='auto'
-                />
+                <img src={bike.image} alt={bike.name} width='100%' height='auto' />
               </div>
               <h3 className='bike-mob-name'>{bike.name}</h3>
             </div>
@@ -33,9 +28,7 @@ function BikeList({ bikes }: IProps) {
                   <p className='detail-name'>Displacement</p>
                   <h3 className='detail-value'>{bike.displacement} cc</h3>
                 </div>
-                <button className='btn mt-4'>
-                  Explore
-                </button>
+                <button className='btn mt-4'>Explore</button>
               </div>
             </div>
           </div>

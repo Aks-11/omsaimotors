@@ -41,7 +41,9 @@ function CustomCarousel({ items }: IProps) {
               <img src={item.source} alt={`Slide ${index + 1}`} />
             ) : (
               <video
-                ref={(el) => { videoRefs.current[index] = el; }}
+                ref={(el) => {
+                  videoRefs.current[index] = el;
+                }}
                 controls
                 src={item.source}
                 autoPlay
