@@ -47,3 +47,5 @@ export const bikeData: Bike[] = [
     image: CT125X,
   },
 ];
+
+export const parentBikeModelData: string[] = ['Pulsar', 'Dominar', 'Avenger', 'Platina', 'CT'];

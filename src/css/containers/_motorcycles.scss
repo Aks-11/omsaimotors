@@ -1,0 +1,42 @@
+.motorcycles-listing-container {
+    .parent-bike-model {
+        font-size: $fs-25;
+        font-weight: 600;
+        padding: 20px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $grey-bf;
+        &:hover {
+            background-color: $grey-f0;
+            color: $black;
+            cursor: pointer;
+        }
+        &.active {
+            background-color: $grey-f0;
+            color: $black;
+        }
+    }
+    .bike-model {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $grey-bf;
+        font-size: $fs-16;
+        font-weight: 500;
+        line-height: 60px;
+        background-color: $grey-f0;
+        &.active {
+            background-color: $grey-bf;
+            color: $black;
+            font-weight: 600;
+            font-size: $fs-18;
+        }
+        &:hover {
+            background-color: $grey-bf;
+            color: $black;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
