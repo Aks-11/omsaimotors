@@ -1,42 +1,57 @@
 .motorcycles-listing-container {
+  .parent-bike-list-nav {
+    height: calc(100vh - $navbar-height - $booking-banner-height);
+    overflow-y: auto;
     .parent-bike-model {
-        font-size: $fs-25;
-        font-weight: 600;
-        padding: 20px 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $grey-bf;
-        &:hover {
-            background-color: $grey-f0;
-            color: $black;
-            cursor: pointer;
-        }
-        &.active {
-            background-color: $grey-f0;
-            color: $black;
-        }
-    }
-    .bike-model {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $grey-bf;
-        font-size: $fs-16;
-        font-weight: 500;
-        line-height: 60px;
+      font-size: $fs-25;
+      font-weight: 600;
+      padding: 20px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $grey-bf;
+      &:hover {
         background-color: $grey-f0;
-        &.active {
-            background-color: $grey-bf;
-            color: $black;
-            font-weight: 600;
-            font-size: $fs-18;
-        }
-        &:hover {
-            background-color: $grey-bf;
-            color: $black;
-            font-weight: 600;
-            cursor: pointer;
-        }
+        color: $black;
+        cursor: pointer;
+      }
+      &.active {
+        background-color: $grey-f0;
+        color: $black;
+      }
     }
+  }
+  .bike-model-list-nav {
+    height: calc(100vh - $navbar-height - $booking-banner-height);
+    overflow-y: auto;
+    .bike-model {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $grey-bf;
+      font-size: $fs-16;
+      font-weight: 500;
+      background-color: $grey-f0;
+      height: 70px;
+      .description {
+        font-size: $fs-14;
+      }
+      &.active {
+        background-color: $grey-bf;
+        color: $black;
+        font-weight: 600;
+        font-size: $fs-18;
+      }
+      &:hover {
+        background-color: $grey-bf;
+        color: $black;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+  .col-8 {
+    display: flex;
+    align-items: center;
+  }
 }

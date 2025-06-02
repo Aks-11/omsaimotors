@@ -42,3 +42,25 @@
   color: white;
   background-color: darken($red-92d, 10%);
 }
+.secondary-btn {
+  background-color: $black-c07;
+}
+.secondary-btn:hover {
+  background-color: lighten($black-c07, 15%);
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0.6em;
+  background: $scroll-bar-color;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: $scroll-bar-hover-color;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border-radius: 5px;
+}

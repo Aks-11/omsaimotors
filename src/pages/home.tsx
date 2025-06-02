@@ -1,7 +1,5 @@
 import CustomCarousel from '../components/customCarousel';
 import { homePageCarouselData } from '../data';
-import EngineIcon from '../assets/icons/engine.svg';
-import MotorcycleIcon from '../assets/icons/motorcycle.svg';
 import MobilePhone from '../assets/homePage/mobile.png';
 import Calendar from '../assets/homePage/calendar.png';
 import Clock from '../assets/homePage/clock.png';
@@ -16,6 +14,7 @@ import DownArrowIcon from '../assets/icons/down-arrow.svg';
 import BikeList from '../components/bikeList';
 import { bikeData } from '../data/bikeData';
 import Footer from '../layouts/footer';
+import BookingBanner from '../components/bookingBanner';
 
 function Home() {
   return (
@@ -25,17 +24,7 @@ function Home() {
           <CustomCarousel items={homePageCarouselData} />
         </div>
 
-        <div className='action-btns'>
-          <div className='act-btn'>
-            <img src={EngineIcon} width='30' height='auto' className='me-3' />
-            <span className='action-text'>Book a bike service</span>
-          </div>
-          <span className='vertical-separator'></span>
-          <div className='act-btn'>
-            <img src={MotorcycleIcon} width='30' height='auto' className='me-3' />
-            <span className='action-text'>Book a test drive</span>
-          </div>
-        </div>
+        <BookingBanner />
 
         <div className='book-service'>
           <h1 className='service-heading'>

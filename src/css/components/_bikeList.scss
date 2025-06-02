@@ -1,45 +1,52 @@
 .bike-list-container {
   padding-inline: 40px;
-  .bike-detail {
-    .col-5 {
-      display: grid;
-      align-items: center;
-      padding: 0 60px 0;
-    }
-    .bike-name {
-      color: $grey-de;
-      font-size: $fs-60;
-      font-weight: 600;
-      line-height: 200%;
-      text-transform: uppercase;
-    }
-    .bike-mob-name {
-      display: none;
-    }
-    .bike-specs {
-      .detail-sheet {
-        .detail-name {
-          color: $black;
-          font-size: $fs-20;
-          font-weight: 600;
-          line-height: 200%;
-          text-transform: uppercase;
-          line-height: 150%;
-          margin-bottom: 2px;
-        }
-        .detail-value {
-          color: $grey-de;
-          font-family: $secondary-font;
-          font-size: $fs-40;
-          font-weight: 600;
-          line-height: 200%;
-          text-transform: uppercase;
-          line-height: 150%;
-        }
+}
+
+.bike-detail {
+  .col-5 {
+    display: flex;
+    align-items: center;
+    padding: 0 60px 0;
+  }
+  .bike-name {
+    color: $grey-de;
+    font-size: $fs-60;
+    font-weight: 600;
+    line-height: $fs-60;
+    padding-top: 30px;
+    text-transform: uppercase;
+  }
+  .bike-sub-name {
+    font-size: $fs-30;
+    font-weight: 600;
+    color: $grey-de;
+  }
+  .bike-mob-name {
+    display: none;
+  }
+  .bike-specs {
+    .detail-sheet {
+      .detail-name {
+        color: $black;
+        font-size: $fs-20;
+        font-weight: 600;
+        line-height: 200%;
+        text-transform: uppercase;
+        line-height: 150%;
+        margin-bottom: 2px;
       }
-      .btn {
-        width: 100%;
+      .detail-value {
+        color: $grey-de;
+        font-family: $secondary-font;
+        font-size: $fs-40;
+        font-weight: 600;
+        line-height: 200%;
+        text-transform: uppercase;
+        line-height: 150%;
       }
+    }
+    .btn {
+      width: 100%;
     }
   }
 }

@@ -13,6 +13,7 @@ export const bikeData: Bike[] = [
     fuel_capacity: 14,
     displacement: 149.68,
     image: PulsarN150,
+    sub_name: 'Single Channel ABS',
   },
   {
     id: 2,
