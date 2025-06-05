@@ -55,3 +55,23 @@
     align-items: center;
   }
 }
+
+.explore-bike-container {
+  .heading-section {
+    .prev-bike {
+      .prev-active {
+        font-family: $secondary-font;
+        font-weight: 500;
+        font-size: $fs-20;
+        color: $red-92d;
+      }
+      .prev-disabled {
+        font-family: $secondary-font;
+        font-weight: 500;
+        font-size: $fs-20;
+        color: $grey-bf;
+      }
+    }
+
+  }
+}

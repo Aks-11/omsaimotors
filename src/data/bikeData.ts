@@ -8,6 +8,7 @@ import CT125X from '/bikes/ct-125/ct-sv-brake.png';
 export const bikeData: Bike[] = [
   {
     id: 1,
+    key: 'pulsar-n150',
     name: 'Pulsar N150',
     starting_price: 117677,
     fuel_capacity: 14,
@@ -17,6 +18,7 @@ export const bikeData: Bike[] = [
   },
   {
     id: 2,
+    key: 'dominar-400',
     name: 'Dominar 400',
     starting_price: 229781,
     fuel_capacity: 13,
@@ -25,6 +27,7 @@ export const bikeData: Bike[] = [
   },
   {
     id: 3,
+    key: 'avenger-220',
     name: 'Avenger 220 Street',
     starting_price: 143373,
     fuel_capacity: 13,
@@ -33,6 +36,7 @@ export const bikeData: Bike[] = [
   },
   {
     id: 4,
+    key: 'platina-110',
     name: 'Platina 110 ABS',
     starting_price: 79821,
     fuel_capacity: 10.5,
@@ -41,6 +45,7 @@ export const bikeData: Bike[] = [
   },
   {
     id: 5,
+    key: 'ct-125x',
     name: 'CT 125X',
     starting_price: 117677,
     fuel_capacity: 14,
