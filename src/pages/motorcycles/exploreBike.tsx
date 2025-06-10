@@ -48,7 +48,7 @@ function ExploreBike() {
           <div className='bike-nav'>
             {nextBike ? (
               <NavLink to={`/motorcycles/explore/${nextBike.key}`} className='bike-nav-active'>
-                Previous
+                Next
               </NavLink>
             ) : (
               <span className='bike-nav-disabled'>Next</span>
