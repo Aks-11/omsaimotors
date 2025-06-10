@@ -1,3 +1,5 @@
+import type { CarouselItem } from "./carousel";
+
 export type Bike = {
   id: number;
   key: string;
@@ -7,4 +9,5 @@ export type Bike = {
   fuel_capacity: number;
   displacement: number;
   image: string;
+  carousel_images: CarouselItem[];
 };

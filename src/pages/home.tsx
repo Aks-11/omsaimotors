@@ -21,7 +21,7 @@ function Home() {
     <>
       <div className='home-page-container'>
         <div className='carousel-container'>
-          <CustomCarousel items={homePageCarouselData} />
+          <CustomCarousel items={homePageCarouselData} isHomePage />
         </div>
 
         <BookingBanner />

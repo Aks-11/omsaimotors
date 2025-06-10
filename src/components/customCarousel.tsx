@@ -7,9 +7,10 @@ import { useRef } from 'react';
 
 interface IProps {
   items: CarouselItem[];
+  isHomePage?: boolean;
 }
 
-function CustomCarousel({ items }: IProps) {
+function CustomCarousel({ items, isHomePage }: IProps) {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const handleSlideChange = () => {
@@ -38,7 +39,11 @@ function CustomCarousel({ items }: IProps) {
         {items.map((item, index) => (
           <SwiperSlide key={index}>
             {item.type === 'image' ? (
-              <img src={item.source} alt={`Slide ${index + 1}`} />
+              <img
+                src={item.source}
+                alt={`Slide ${index + 1}`}
+                className={isHomePage ? 'home-page-slide' : ''}
+              />
             ) : (
               <video
                 ref={(el) => {

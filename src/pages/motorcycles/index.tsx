@@ -43,6 +43,7 @@ function MotorcyclesListing() {
                   <div
                     className={`col-12 bike-model ${selectedBike?.id === bike.id ? 'active' : ''}`}
                     key={bike.id}
+                    onClick={() => setSelectedBike(bike)}
                   >
                     <div>
                       <div className='text-center'>{bike.name}</div>

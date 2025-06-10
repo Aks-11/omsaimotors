@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import type { Bike } from '../schemas/bike';
 import { customFormatNumber } from '../utils/utilities';
 
@@ -7,13 +8,15 @@ interface IProps {
 }
 
 function BikeView({ bike, testDriveBtn }: IProps) {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className='bike-detail' key={bike.id}>
         <div className='row'>
           <div className='col-7'>
-        <div className='bike-name'>{bike.name}</div>
-        {bike.sub_name && <div className='bike-sub-name'>{bike.sub_name}</div>}
+            <div className='bike-name'>{bike.name}</div>
+            {bike.sub_name && <div className='bike-sub-name'>{bike.sub_name}</div>}
             <div className='bike-img'>
               <img src={bike.image} alt={bike.name} width='100%' height='auto' />
             </div>
@@ -29,7 +32,12 @@ function BikeView({ bike, testDriveBtn }: IProps) {
                 <p className='detail-name'>Displacement</p>
                 <h3 className='detail-value'>{bike.displacement} cc</h3>
               </div>
-              <button className='btn mt-4'>Explore</button>
+              <button
+                className='btn mt-4'
+                onClick={() => navigate(`/motorcycles/explore/${bike.key}`)}
+              >
+                Explore
+              </button>
               {testDriveBtn && <button className='btn secondary-btn mt-2'>Book test drive</button>}
             </div>
           </div>

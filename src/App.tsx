@@ -12,9 +12,8 @@ function App() {
         <Route element={<MainContent />}>
           <Route index element={<Navigate replace to='home' />}></Route>
           <Route path='home' element={<Home />}></Route>
-          <Route path='motorcycles' element={<MotorcyclesListing />}>
-            <Route path='explore/:key' element={<ExploreBike />} />
-          </Route>
+          <Route path='motorcycles' element={<MotorcyclesListing />}></Route>
+          <Route path='motorcycles/explore/:key' element={<ExploreBike />} />
         </Route>
       </Routes>
     </>
