@@ -61,12 +61,7 @@ function Footer() {
             </li>
             <li className='location'>
               <a className='foot-link' href='contactus.html'>
-                <img
-                  src={MapIcon}
-                  alt='location'
-                  height='18px'
-                  width='auto'
-                />
+                <img src={MapIcon} alt='location' height='18px' width='auto' />
                 <span className='ms-2'>Our Location</span>
               </a>
             </li>
@@ -92,28 +87,13 @@ function Footer() {
           </div>
           <div className='col-6 col-lg-2 social-media'>
             <a href='' className='social-icon'>
-              <img
-                src={WhatsappIcon}
-                alt='whatsapp'
-                width='20'
-                height='auto'
-              />
+              <img src={WhatsappIcon} alt='whatsapp' width='20' height='auto' />
             </a>
             <a href='' className='social-icon'>
-              <img
-                src={FacebookIcon}
-                alt='facebook'
-                width='20'
-                height='auto'
-              />
+              <img src={FacebookIcon} alt='facebook' width='20' height='auto' />
             </a>
             <a href='' className='social-icon'>
-              <img
-                src={InstagramIcon}
-                alt='instagram'
-                width='20'
-                height='auto'
-              />
+              <img src={InstagramIcon} alt='instagram' width='20' height='auto' />
             </a>
           </div>
         </div>
