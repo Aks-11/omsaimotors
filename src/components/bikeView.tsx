@@ -28,9 +28,9 @@ function BikeView({ bike, testDriveBtn }: IProps) {
                 <p className='detail-name'>Starting from</p>
                 <h3 className='detail-value'>₹{customFormatNumber(bike.starting_price)}</h3>
                 <p className='detail-name'>Fuel Capacity</p>
-                <h3 className='detail-value'>{bike.fuel_capacity} L</h3>
+                <h3 className='detail-value'>{bike.specifications.fuel_capacity} L</h3>
                 <p className='detail-name'>Displacement</p>
-                <h3 className='detail-value'>{bike.displacement} cc</h3>
+                <h3 className='detail-value'>{bike.specifications.displacement} cc</h3>
               </div>
               <button
                 className='btn mt-4'
