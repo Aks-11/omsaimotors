@@ -1,0 +1,33 @@
+.service-page-container {
+  padding: 4rem 0;
+  .main-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    .book-drive-service {
+      .action {
+        text-decoration: none;
+        .action-text {
+          margin-top: 1rem;
+          color: black;
+          font-size: $fs-24;
+          font-weight: 600;
+          line-height: 140%;
+          text-align: center;
+        }
+        img {
+          border-radius: 10px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        img {
+          opacity: 0.8;
+          transition: opacity 0.2s;
+        }
+      }
+    }
+  }
+}

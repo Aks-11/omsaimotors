@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import type { Bike } from '../schemas/bike';
 import { customFormatNumber } from '../utils/utilities';
 
@@ -6,6 +7,8 @@ interface IProps {
 }
 
 function BikeList({ bikes }: IProps) {
+  const navigate = useNavigate();
+
   return (
     <div className='bike-list-container'>
       {bikes.map((bike) => (
@@ -28,7 +31,9 @@ function BikeList({ bikes }: IProps) {
                   <p className='detail-name'>Displacement</p>
                   <h3 className='detail-value'>{bike.specifications.displacement} cc</h3>
                 </div>
-                <button className='btn mt-4'>Explore</button>
+                <button className='btn mt-4' onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate(`/motorcycles/explore/${bike.key}`)}}>Explore</button>
               </div>
             </div>
           </div>
