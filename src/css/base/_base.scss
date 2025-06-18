@@ -1,6 +1,16 @@
 @import '@fontsource/plus-jakarta-sans';
 @import '@fontsource/inter';
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
 html {
   font-size: 100%;
   scroll-behavior: unset;
@@ -13,4 +23,10 @@ body {
   position: relative;
   padding: 0;
   font-size: $fs-18;
+}
+
+.outlet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

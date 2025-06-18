@@ -1,7 +1,12 @@
 .motorcycles-listing-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   .parent-bike-list-nav {
     height: calc(100vh - $navbar-height - $booking-banner-height);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     .parent-bike-model {
       font-size: $fs-25;
       font-weight: 600;

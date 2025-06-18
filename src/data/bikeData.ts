@@ -43,8 +43,8 @@ export const bikeData: Bike[] = [
   },
   {
     id: 2,
-    key: 'pulsar-250',
-    name: 'Pulsar 250',
+    key: 'pulsar-n250',
+    name: 'Pulsar N250',
     starting_price: 146641,
     image: '/bikes/pulsar-250/pulsar-250-black-sv-brake.png',
     sub_name: 'Dual Channel ABS',
@@ -196,6 +196,18 @@ export const bikeData: Bike[] = [
       {
         type: 'image',
         source: '/bikes/ct-125/ct-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-bv.png',
       },
     ],
     specifications: {

@@ -1,15 +1,12 @@
 import EngineIcon from '../assets/icons/engine.svg';
 import MotorcycleIcon from '../assets/icons/motorcycle.svg';
 
-interface IProps {
-  fixedBottomPosition?: boolean;
-}
-
-function BookingBanner({ fixedBottomPosition }: IProps) {
+function BookingBanner() {
   return (
     <>
       <div
-        className={`booking-banner-container ${fixedBottomPosition ? 'fixed-position-bottom' : ''}`}
+        className={`booking-banner-container`}
+        // className={`booking-banner-container ${fixedBottomPosition ? 'fixed-position-bottom' : ''}`}
       >
         <div className='act-btn'>
           <img src={EngineIcon} width='30' height='auto' className='me-3' />

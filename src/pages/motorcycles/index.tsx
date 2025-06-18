@@ -17,11 +17,11 @@ function MotorcyclesListing() {
 
   return (
     <>
-      <div className='motorcycles-listing-container container-fluid'>
-        <div className='row'>
+      <div className='motorcycles-listing-container'>
+        <div className='row gx-0'>
           {/* Left nav for parent bike models */}
           <div className='col-2 parent-bike-list-nav'>
-            <div className='row'>
+            <div className='row gx-0'>
               {parentBikeModelData.map((modelName, index) => (
                 <div
                   className={`col-12 parent-bike-model ${selectedParentBike === modelName ? 'active' : ''}`}
@@ -36,7 +36,7 @@ function MotorcyclesListing() {
 
           {/* Sub nav for specific bike models */}
           <div className='col-2 bike-model-list-nav'>
-            <div className='row'>
+            <div className='row gx-0'>
               {bikeData
                 .filter((bike) => bike.name.startsWith(selectedParentBike))
                 .map((bike) => (
@@ -62,9 +62,7 @@ function MotorcyclesListing() {
           </div>
         </div>
 
-        <div className='row'>
-          <BookingBanner fixedBottomPosition />
-        </div>
+        <BookingBanner />
       </div>
     </>
   );

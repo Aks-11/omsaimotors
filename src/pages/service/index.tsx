@@ -24,9 +24,7 @@ function ServicePage() {
             </a>
           </div>
         </div>
-      </div>
-      <div className='row gx-0'>
-        <BookingBanner fixedBottomPosition />
+        <BookingBanner />
       </div>
     </>
   );
