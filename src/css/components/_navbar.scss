@@ -2,8 +2,15 @@
   background-color: #000;
   padding: 0;
   height: 80px;
+  // Force Bootstrap's navbar variables to 0
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-padding-x: 0;
+  
   .container {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .mobile-nav {
     display: none;

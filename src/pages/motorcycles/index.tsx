@@ -18,7 +18,7 @@ function MotorcyclesListing() {
   return (
     <>
       <div className='motorcycles-listing-container'>
-        <div className='row gx-0'>
+        <div className='row gx-0 flex-grow-1'>
           {/* Left nav for parent bike models */}
           <div className='col-2 parent-bike-list-nav'>
             <div className='row gx-0'>

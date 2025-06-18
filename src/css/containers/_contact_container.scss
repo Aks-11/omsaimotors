@@ -1,0 +1,10 @@
+.contact-us-page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
