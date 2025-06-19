@@ -1,10 +1,63 @@
 .contact-us-page-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .main-wrapper {
     display: flex;
-    flex-direction: column;
     flex: 1;
-    .main-wrapper {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+    .info-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 2rem 2rem;
+      flex: 1 1 40%;
+      .info-card-container {
+        .info-card {
+          padding: 20px;
+          background-color: $grey-f0;
+          border-radius: 1.5rem;
+          height: 100%;
+          min-height: 150px;
+          .card-heading {
+            display: flex;
+            align-items: center;
+            font-size: $fs-20;
+            font-weight: 700;
+          }
+          .deets {
+            font-family: $secondary-font;
+            font-size: $fs-14;
+            font-weight: 500;
+            a {
+                color: black;
+            }
+          }
+        }
+      }
     }
+    .map-container {
+      flex: 1 1 60%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      .find-us-text {
+        width: 80%;
+        display: flex;
+        justify-content:flex-start;
+        font-size: $fs-20;
+        font-weight: 500;
+        color: $grey-bf;
+      }
+      iframe {
+        border-radius: 10px;
+        width: 80%;
+        height: 90%;
+        border: 4px solid $grey-de;
+      }
+    }
+  }
 }
