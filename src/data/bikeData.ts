@@ -1,0 +1,230 @@
+import { BrakeType, BrakingSystem, TransmissionType, type Bike } from '../schemas/bike';
+
+export const bikeData: Bike[] = [
+  {
+    id: 1,
+    key: 'pulsar-n150',
+    name: 'Pulsar N150',
+    starting_price: 117677,
+    image: '/bikes/pulsar-n150/pulsar-sv-brake.png',
+    sub_name: 'Single Channel ABS',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-n150/pulsar-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-n150/pulsar-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-n150/pulsar-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-n150/pulsar-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 14,
+      displacement: 149.68,
+      max_power: '14.3 PS @ 8500 rpm',
+      max_torque: '13.5 Nm @ 6000 rpm',
+      mileage: 48,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 145,
+      seat_height: 790,
+      ground_clearance: 165,
+    },
+  },
+  {
+    id: 2,
+    key: 'pulsar-n250',
+    name: 'Pulsar N250',
+    starting_price: 146641,
+    image: '/bikes/pulsar-250/pulsar-250-black-sv-brake.png',
+    sub_name: 'Dual Channel ABS',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-250/pulsar-250-black-sv-brake.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 14,
+      displacement: 249,
+      max_power: '24.5 PS @ 8750 rpm',
+      max_torque: '21.5 Nm @ 6500 rpm',
+      mileage: 44,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 162,
+      seat_height: 795,
+      ground_clearance: 165,
+    },
+  },
+  {
+    id: 3,
+    key: 'dominar-400',
+    name: 'Dominar 400',
+    starting_price: 229781,
+    image: '/bikes/dominar-400/dominar-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 373.3,
+      max_power: '40 PS @ 8800 rpm',
+      max_torque: '35 Nm @ 6500 rpm',
+      mileage: 30,
+      transmission: TransmissionType.Speed6Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 193,
+      seat_height: 800,
+      ground_clearance: 157,
+    },
+  },
+  {
+    id: 4,
+    key: 'avenger-220-street',
+    name: 'Avenger 220 Street',
+    starting_price: 143373,
+    image: '/bikes/avenger/avenger-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/avenger/avenger-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger/avenger-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger/avenger-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger/avenger-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 220,
+      max_power: '19.03 PS @ 8500 rpm',
+      max_torque: '17.55 Nm @ 7000 rpm',
+      mileage: 40,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 163,
+      seat_height: 737,
+      ground_clearance: 169,
+    },
+  },
+  {
+    id: 5,
+    key: 'platina-110',
+    name: 'Platina 110 ABS',
+    starting_price: 79821,
+    image: '/bikes/platina/platina-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/platina/platina-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/platina/platina-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/platina/platina-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/platina/platina-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 11,
+      displacement: 115.45,
+      max_power: '8.6 PS @ 7000 rpm',
+      max_torque: '9.81 Nm @ 5000 rpm',
+      mileage: 70,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 123,
+      seat_height: 807,
+      ground_clearance: 200,
+    },
+  },
+  {
+    id: 6,
+    key: 'ct-125x',
+    name: 'CT 125X',
+    starting_price: 117677,
+    image: '/bikes/ct-125/ct-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/ct-125/ct-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 11,
+      displacement: 124.4,
+      max_power: '10.9 PS @ 8000 rpm',
+      max_torque: '11 Nm @ 5500 rpm',
+      mileage: 60,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 130,
+      seat_height: 810,
+      ground_clearance: 170,
+    },
+  },
+];
+
+export const parentBikeModelData: string[] = ['Pulsar', 'Dominar', 'Avenger', 'Platina', 'CT'];

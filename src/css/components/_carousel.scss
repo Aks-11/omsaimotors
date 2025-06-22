@@ -2,12 +2,15 @@
   .my-swiper {
     width: 100%;
     height: 500px;
-  }
-
-  .my-swiper img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    .home-page-slide {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .my-video-slide {

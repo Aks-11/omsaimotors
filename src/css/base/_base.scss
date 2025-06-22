@@ -1,16 +1,32 @@
-@import '@fontsource/plus-jakarta-sans'; // Default weight 400
+@import '@fontsource/plus-jakarta-sans';
+@import '@fontsource/inter';
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
 html {
   font-size: 100%;
   scroll-behavior: unset;
+}
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  font-size: $fs-18;
+}
 
-  body {
-    font-family: $main-font;
-    font-weight: 400;
-    line-height: 1.7;
-    box-sizing: border-box;
-    position: relative;
-    padding: 0;
-    font-size: $fs-18;
-  }
+.outlet-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

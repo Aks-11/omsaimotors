@@ -8,7 +8,8 @@ $inter-medium: 'Inter Medium';
 $inter-semibold: 'Inter SemiBold';
 $inter-bold: 'Inter Bold';
 
-$main-font: $jakarta-sans;
+$primary-font: $jakarta-sans;
+$secondary-font: $inter;
 
 // Font sizes
 $fs-8: 0.5rem;
@@ -22,14 +23,17 @@ $fs-17: 1.063rem;
 $fs-18: 1.125rem;
 $fs-20: 1.25rem;
 $fs-22: 1.375rem;
-$fs-03: 1.3rem;
 $fs-24: 1.5rem;
 $fs-32: 2rem;
 $fs-26: 1.625rem;
 $fs-25: 1.563rem;
 $fs-28: 1.75rem;
 $fs-30: 1.875rem;
+$fs-38: 2.375rem;
+$fs-40: 2.5rem;
 $fs-48: 3rem;
+$fs-50: 3.125rem;
+$fs-60: 3.75rem;
 
 // Font weights
 $fw-100: 100;
@@ -53,3 +57,10 @@ $grey-de: #dedede;
 $grey-bf: #bfbfbf;
 $grey-8c: #8c8c8c;
 $blue-1e8: #4d81e8;
+$black-c07: #0a0c07;
+
+// Components
+$navbar-height: 80px;
+$booking-banner-height: 70px;
+$scroll-bar-color: #d9d9d9 !default;
+$scroll-bar-hover-color: #4f4f4f !default;
