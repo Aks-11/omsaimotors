@@ -6,6 +6,7 @@ import MotorcyclesListing from './pages/motorcycles';
 import ExploreBike from './pages/motorcycles/exploreBike';
 import ServicePage from './pages/service';
 import ContactUsPage from './pages/contact';
+import AboutUsPage from './pages/about';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='motorcycles/explore/:key' element={<ExploreBike />} />
           <Route path='service' element={<ServicePage />}></Route>
           <Route path='contact' element={<ContactUsPage />}></Route>
+          <Route path='about' element={<AboutUsPage />}></Route>
         </Route>
       </Routes>
     </>
