@@ -1,0 +1,48 @@
+.about-us-page-container {
+  .padded-section {
+    padding: 20px 40px;
+    .page-heading {
+      color: $grey-de;
+      font-size: $fs-38;
+      font-weight: 600;
+    }
+    .sub-heading {
+      font-size: $fs-28;
+      font-weight: 600;
+    }
+    .hero-image-wrapper {
+      .hero-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .description-text {
+      padding: 40px 40px;
+      font-family: $secondary-font;
+      font-size: $fs-18;
+      font-weight: 500;
+      text-align: justify;
+      color: $grey-97;
+    }
+    .service-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: $fs-16;
+      font-weight: 600;
+      .service-text {
+        color: $grey-97;
+      }
+      .highlight-text {
+        color: $red-92d;
+      }
+    }
+    .equal-img {
+      width: 100%;
+      height: 372px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
