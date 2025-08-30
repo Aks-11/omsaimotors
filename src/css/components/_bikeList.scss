@@ -8,13 +8,15 @@
     align-items: center;
     padding: 0 60px 0;
   }
-  .bike-name {
-    color: $grey-de;
-    font-size: $fs-60;
-    font-weight: 600;
-    line-height: $fs-60;
-    padding-top: 30px;
-    text-transform: uppercase;
+  .bike-name-container {
+    .bike-name {
+      color: $grey-de;
+      font-size: $fs-60;
+      font-weight: 600;
+      line-height: $fs-60;
+      padding-top: 30px;
+      text-transform: uppercase;
+    }
   }
   .bike-sub-name {
     font-size: $fs-30;
@@ -47,6 +49,26 @@
     }
     .btn {
       width: 100%;
+    }
+  }
+  .explore-btn-mob {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .bike-name-container {
+      justify-content: center;
+      .bike-name {
+        font-size: $fs-38;
+        padding-top: 50px;
+      }
+    }
+    .bike-specs {
+      display: none;
+    }
+    .explore-btn-mob {
+      display: flex;
+      justify-content: center;
     }
   }
 }
