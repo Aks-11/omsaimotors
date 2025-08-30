@@ -152,7 +152,7 @@ function Home() {
                   <p>date</p>
                 </div>
                 <div className='arrow'>
-                  <img src={DownArrowIcon} alt='Arrow' height='75px' width='auto' />
+                  <img src={DownArrowIcon} alt='Arrow' />
                 </div>
                 <div className='desc-text'>
                   <p className='big-text'>Your</p>
