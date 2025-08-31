@@ -57,7 +57,7 @@ function MotorcyclesListing() {
           </div>
 
           {/* Main content area for bike details */}
-          <div className='col-8 px-5'>
+          <div className='col-lg-8 col-12 px-5'>
             {selectedBike && <BikeView bike={selectedBike} testDriveBtn />}
           </div>
         </div>

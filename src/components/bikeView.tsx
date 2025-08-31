@@ -12,7 +12,7 @@ function BikeView({ bike, testDriveBtn }: IProps) {
 
   return (
     <>
-      <div className='bike-detail' key={bike.id}>
+      <div className='bike-view-container' key={bike.id}>
         <div className='row'>
           <div className='col-7'>
             <div className='bike-name'>{bike.name}</div>
@@ -20,7 +20,6 @@ function BikeView({ bike, testDriveBtn }: IProps) {
             <div className='bike-img'>
               <img src={bike.image} alt={bike.name} width='100%' height='auto' />
             </div>
-            <h3 className='bike-mob-name'>{bike.name}</h3>
           </div>
           <div className='col-5'>
             <div className='bike-specs'>
