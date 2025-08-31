@@ -1,13 +1,25 @@
 import { NavLink } from 'react-router-dom';
 import OmSaiMotorsLogo from '../assets/omsaimotors.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { bikeData, parentBikeModelData } from '../data/bikeData';
 
 const Header = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isMotorcyclesSubMenuOpen, setIsMotorcyclesSubMenuOpen] = useState(false);
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
+
+  const toggleMotorcyclesSubMenu = () => {
+    setIsMotorcyclesSubMenuOpen(!isMotorcyclesSubMenuOpen);
+  };
+
+  useEffect(() => {
+    if (!isMobileNavOpen) {
+      setIsMotorcyclesSubMenuOpen(false);
+    }
+  }, [isMobileNavOpen]);
 
   return (
     <>
@@ -48,19 +60,38 @@ const Header = () => {
                 ×
               </button>
             </div>
-            <div className='mobile-nav-links'>
-              <NavLink to='/motorcycles' className='nav-link' onClick={toggleMobileNav}>
-                Motorcycles
-              </NavLink>
-              <NavLink to='/service' className='nav-link' onClick={toggleMobileNav}>
-                Service
-              </NavLink>
-              <NavLink to='/contact' className='nav-link' onClick={toggleMobileNav}>
-                Contact Us
-              </NavLink>
-              <NavLink to='/about' className='nav-link' onClick={toggleMobileNav}>
-                About Us
-              </NavLink>
+            <div>
+              {isMotorcyclesSubMenuOpen ? (
+                <div className='motorcycle-sub-menu'>
+                  <div className='title'>MOTORCYCLES</div>
+                  {parentBikeModelData.map((parentModel, index) => (
+                    <div key={index}>
+                      <NavLink
+                        to={`/motorcycles/explore/${bikeData.find((bike) => bike.key.includes(parentModel.toLowerCase()))?.key ?? ''}`}
+                        className='nav-link'
+                        onClick={toggleMobileNav}
+                      >
+                        {parentModel}
+                      </NavLink>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className='mobile-nav-links'>
+                  <div className='nav-link' onClick={toggleMotorcyclesSubMenu}>
+                    Motorcycles
+                  </div>
+                  <NavLink to='/service' className='nav-link' onClick={toggleMobileNav}>
+                    Service
+                  </NavLink>
+                  <NavLink to='/contact' className='nav-link' onClick={toggleMobileNav}>
+                    Contact Us
+                  </NavLink>
+                  <NavLink to='/about' className='nav-link' onClick={toggleMobileNav}>
+                    About Us
+                  </NavLink>
+                </div>
+              )}
             </div>
           </div>
         )}
