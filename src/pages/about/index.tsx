@@ -49,22 +49,22 @@ function AboutUsPage() {
               </div>
             </div>
           </div>
-          <div className="image-gallery mt-5">
-            <div className="row g-3">
-              <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                <img src={Gallery1} className="img-fluid equal-img" alt="" />
+          <div className='image-gallery mt-5'>
+            <div className='row g-3'>
+              <div className='col-lg-6 col-md-6 col-sm-6 col-12'>
+                <img src={Gallery1} className='img-fluid equal-img' alt='' />
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                <img src={Gallery2} className="img-fluid equal-img" alt="" />
+              <div className='col-lg-6 col-md-6 col-sm-6 col-12'>
+                <img src={Gallery2} className='img-fluid equal-img' alt='' />
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 col-12">
-                <img src={Gallery3} className="img-fluid equal-img" alt="" />
+              <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
+                <img src={Gallery3} className='img-fluid equal-img' alt='' />
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 col-12">
-                <img src={Gallery4} className="img-fluid equal-img" alt="" />
+              <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
+                <img src={Gallery4} className='img-fluid equal-img' alt='' />
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 col-12">
-                <img src={Gallery5} className="img-fluid equal-img" alt="" />
+              <div className='col-lg-4 col-md-4 col-sm-4 col-12'>
+                <img src={Gallery5} className='img-fluid equal-img' alt='' />
               </div>
             </div>
           </div>
