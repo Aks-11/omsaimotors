@@ -112,13 +112,22 @@
       }
     }
 
-    .motorcycle-sub-menu {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .title {
       color: white;
       font-size: 1.25rem;
       font-weight: 600;
+    }
+
+    .motorcycle-sub-menu {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      .nav-link {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
