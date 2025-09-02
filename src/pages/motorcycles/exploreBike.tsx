@@ -5,12 +5,14 @@ import type { Bike } from '../../schemas/bike';
 import CustomCarousel from '../../components/customCarousel';
 import { customFormatNumber } from '../../utils/utilities';
 import Footer from '../../layouts/footer';
+import BikeEnquiryModal from '../../components/bikeEnquiryModal';
 
 function ExploreBike() {
   const { key } = useParams();
   const [bike, setBike] = useState<Bike | null>(null);
   const [nextBike, setNextBike] = useState<Bike | null>(null);
   const [prevBike, setPrevBike] = useState<Bike | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setBike(bikeData.find((b) => b.key === key) || null);
@@ -67,7 +69,9 @@ function ExploreBike() {
               </div>
               <div className='col-6'>
                 <div className='btn-container'>
-                  <button className='btn'>Enquiry</button>
+                  <button className='btn' onClick={() => setIsModalOpen(true)}>
+                    Enquiry
+                  </button>
                 </div>
               </div>
             </div>
@@ -140,6 +144,11 @@ function ExploreBike() {
         </div>
       </div>
       <Footer />
+      <BikeEnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        bikeDetails={bike}
+      />
     </>
   );
 }

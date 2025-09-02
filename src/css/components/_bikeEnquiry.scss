@@ -1,0 +1,25 @@
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        padding: 10px 20px;
+        .modal-title {
+          font-size: $fs-20;
+          font-weight: 700;
+        }
+      }
+      .modal-body {
+        p {
+          font-size: $fs-16;
+        }
+        form,
+        .form-control {
+          font-size: $fs-14;
+          .btn {
+            font-size: $fs-12;
+          }
+        }
+      }
+    }
+  }
+}
