@@ -13,15 +13,17 @@ function BikeList({ bikes }: IProps) {
     <div className='bike-list-container'>
       {bikes.map((bike) => (
         <div className='bike-detail' key={bike.id}>
-          <span className='bike-name'>{bike.name}</span>
+          <div className='bike-name-container d-flex'>
+            <span className='bike-name'>{bike.name}</span>
+          </div>
           <div className='row'>
-            <div className='col-7'>
+            <div className='col-lg-7 col-md-12 col-sm-12 col-12'>
               <div className='bike-img'>
                 <img src={bike.image} alt={bike.name} width='100%' height='auto' />
               </div>
               <h3 className='bike-mob-name'>{bike.name}</h3>
             </div>
-            <div className='col-5'>
+            <div className='col-lg-5 col-md-12'>
               <div className='bike-specs'>
                 <div className='detail-sheet'>
                   <p className='detail-name'>Starting from</p>
@@ -31,10 +33,27 @@ function BikeList({ bikes }: IProps) {
                   <p className='detail-name'>Displacement</p>
                   <h3 className='detail-value'>{bike.specifications.displacement} cc</h3>
                 </div>
-                <button className='btn mt-4' onClick={() => {
+                <button
+                  className='btn mt-4'
+                  onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                  navigate(`/motorcycles/explore/${bike.key}`)}}>Explore</button>
+                    navigate(`/motorcycles/explore/${bike.key}`);
+                  }}
+                >
+                  Explore
+                </button>
               </div>
+            </div>
+            <div className='explore-btn-mob col-12'>
+              <button
+                className='btn mt-4'
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate(`/motorcycles/explore/${bike.key}`);
+                }}
+              >
+                Explore
+              </button>
             </div>
           </div>
         </div>

@@ -48,6 +48,13 @@
 .secondary-btn:hover {
   background-color: lighten($black-c07, 15%);
 }
+.success-btn {
+  background-color: $green;
+  border-color: $green;
+}
+.success-btn:hover {
+  background-color: lighten($green, 15%);
+}
 
 // Scrollbar
 ::-webkit-scrollbar {

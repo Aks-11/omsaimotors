@@ -60,7 +60,7 @@ function Footer() {
               <p className='foot-link'>+91 83683 20977</p>
             </li>
             <li className='location'>
-              <a className='foot-link' href='contactus.html'>
+              <a className='foot-link' href='../../contact'>
                 <img src={MapIcon} alt='location' height='18px' width='auto' />
                 <span className='ms-2'>Our Location</span>
               </a>

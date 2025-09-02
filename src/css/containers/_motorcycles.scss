@@ -59,6 +59,13 @@
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: 991px) {
+    .parent-bike-list-nav,
+    .bike-model-list-nav {
+      display: none;
+    }
+  }
 }
 
 .explore-bike-container {
@@ -177,6 +184,42 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .heading-section {
+      .bike-nav {
+        display: none;
+      }
+      .heading {
+        flex-basis: 100%;
+        .current-bike {
+          line-height: 20px;
+          .big-text {
+            font-size: $fs-20;
+          }
+          .small-text {
+            font-size: $fs-20;
+          }
+        }
+      }
+    }
+    .price-and-enquiry {
+      max-width: 100%;
+      .title {
+        font-size: $fs-16;
+      }
+      .showroom-price {
+        margin-bottom: 1rem;
+        .price {
+          font-size: $fs-20;
+        }
+      }
+    }
+    .bike-specifications {
+      margin: 0 10px;
+      width: unset;
     }
   }
 }

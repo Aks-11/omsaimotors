@@ -14,11 +14,7 @@ function ServicePage() {
             </a>
           </div>
           <div className='book-drive-service'>
-            <a
-              data-bs-toggle='modal'
-              className='action'
-              id='book-service-action'
-            >
+            <a data-bs-toggle='modal' className='action' id='book-service-action'>
               <img src={ServieImage} alt='' width='500px' height='auto' />
               <p className='action-text'>Book your Bike Service</p>
             </a>

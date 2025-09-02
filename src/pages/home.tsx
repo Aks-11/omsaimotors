@@ -15,8 +15,27 @@ import BikeList from '../components/bikeList';
 import { bikeData } from '../data/bikeData';
 import Footer from '../layouts/footer';
 import BookingBanner from '../components/bookingBanner';
+import type { CarouselItem } from '../schemas/carousel';
 
 function Home() {
+  const bannersContainerMob: CarouselItem[] = [
+    {
+      type: 'image',
+      source: Pulsar250,
+    },
+    {
+      type: 'image',
+      source: Avenger220,
+    },
+    {
+      type: 'image',
+      source: Dominar400,
+    },
+    {
+      type: 'image',
+      source: AdBanner,
+    },
+  ];
   return (
     <>
       <div className='home-page-container'>
@@ -30,32 +49,38 @@ function Home() {
           <h1 className='service-heading'>
             Book your Bike service slot in <span className='red-text'>three</span> simple steps
           </h1>
-          <div className='service-steps'>
+          <div className='service-steps gap-3'>
             <div className='bg-grey'>
-              <img src={MobilePhone} alt='add-details' className='step-img mobile' />
+              <img src={MobilePhone} alt='add-details' className='step-img mobile img-fluid' />
             </div>
             <div className='bg-grey'>
-              <img src={Calendar} alt='get-confirmation' className='step-img calendar' />
+              <img src={Calendar} alt='get-confirmation' className='step-img calendar img-fluid' />
             </div>
             <div className='bg-grey'>
-              <img src={Clock} alt='choose-slot' className='step-img clock' />
+              <img src={Clock} alt='choose-slot' className='step-img clock img-fluid' />
             </div>
           </div>
           <div className='steps-container'>
-            <div className='steps-wrapper'>
+            <div className='steps-wrapper gap-3'>
               <span className='step-description'>Add your details</span>
               <img className='spanner' src={SpannerIcon} alt='spanner' />
               <span className='step-description'>Choose your slot</span>
               <img className='spanner' src={SpannerIcon} alt='spanner' />
               <span className='step-description'>Get your confirmation</span>
             </div>
-            <div className='mt-3'>
-              <button className='btn'>Book Now</button>
+            <div className='row mt-3'>
+              <div className='col-12'>
+                <div className='d-flex justify-content-center'>
+                  <div className='col-lg-8 col-md-10 col-sm-12 col-12'>
+                    <button className='btn w-100'>Book Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className='banners-container'>
+        <div className='banners-container-web'>
           <div className='row'>
             <div className='col-7'>
               <img
@@ -107,6 +132,10 @@ function Home() {
           </div>
         </div>
 
+        <div className='banners-container-mob'>
+          <CustomCarousel items={bannersContainerMob} isHomePage />
+        </div>
+
         <div className='mt-5'>
           <BikeList bikes={bikeData} />
         </div>
@@ -123,7 +152,7 @@ function Home() {
                   <p>date</p>
                 </div>
                 <div className='arrow'>
-                  <img src={DownArrowIcon} alt='Arrow' height='75px' width='auto' />
+                  <img src={DownArrowIcon} alt='Arrow' />
                 </div>
                 <div className='desc-text'>
                   <p className='big-text'>Your</p>
