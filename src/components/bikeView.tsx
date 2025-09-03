@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Bike } from '../schemas/bike';
 import { customFormatNumber } from '../utils/utilities';
+import BikeEnquiryModal from './bikeEnquiryModal';
 
 interface IProps {
   bike: Bike;
@@ -9,6 +11,7 @@ interface IProps {
 
 function BikeView({ bike, testDriveBtn }: IProps) {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -37,11 +40,22 @@ function BikeView({ bike, testDriveBtn }: IProps) {
               >
                 Explore
               </button>
-              {testDriveBtn && <button className='btn secondary-btn mt-2'>Book test drive</button>}
+              {testDriveBtn && (
+                <button className='btn secondary-btn mt-2' onClick={() => setIsModalOpen(true)}>
+                  Enquiry
+                </button>
+              )}
             </div>
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <BikeEnquiryModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          bikeDetails={bike}
+        />
+      )}
     </>
   );
 }

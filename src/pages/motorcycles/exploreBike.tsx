@@ -144,11 +144,13 @@ function ExploreBike() {
         </div>
       </div>
       <Footer />
-      <BikeEnquiryModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        bikeDetails={bike}
-      />
+      {isModalOpen && (
+        <BikeEnquiryModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          bikeDetails={bike}
+        />
+      )}
     </>
   );
 }
