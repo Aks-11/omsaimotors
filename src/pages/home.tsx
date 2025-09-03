@@ -16,6 +16,8 @@ import { bikeData } from '../data/bikeData';
 import Footer from '../layouts/footer';
 import BookingBanner from '../components/bookingBanner';
 import type { CarouselItem } from '../schemas/carousel';
+import { useState } from 'react';
+import BookServiceModal from '../components/bookServiceModal';
 
 function Home() {
   const bannersContainerMob: CarouselItem[] = [
@@ -36,6 +38,7 @@ function Home() {
       source: AdBanner,
     },
   ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className='home-page-container'>
@@ -72,7 +75,9 @@ function Home() {
               <div className='col-12'>
                 <div className='d-flex justify-content-center'>
                   <div className='col-lg-8 col-md-10 col-sm-12 col-12'>
-                    <button className='btn w-100'>Book Now</button>
+                    <button className='btn w-100' onClick={() => setIsModalOpen(true)}>
+                      Book Now
+                    </button>
                   </div>
                 </div>
               </div>
@@ -160,7 +165,7 @@ function Home() {
                 </div>
                 <div className='service-cta'>
                   <p className='description'>Get your best bike service with US</p>
-                  <button className='btn'>Book Now</button>
+                  <button className='btn' onClick={() => setIsModalOpen(true)}>Book Now</button>
                 </div>
               </div>
             </div>
@@ -171,6 +176,9 @@ function Home() {
           <Footer />
         </div>
       </div>
+      {isModalOpen && (
+        <BookServiceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      )}
     </>
   );
 }

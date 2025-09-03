@@ -1,20 +1,30 @@
+import { useState } from 'react';
 import ServieImage from '../../assets/service/service.png';
 import TestRideImage from '../../assets/service/test-ride.png';
+import BikeEnquiryModal from '../../components/bikeEnquiryModal';
 import BookingBanner from '../../components/bookingBanner';
+import BookServiceModal from '../../components/bookServiceModal';
 
 function ServicePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   return (
     <>
       <div className='service-page-container'>
         <div className='main-wrapper'>
           <div className='book-drive-service'>
-            <a className='action' id='book-ride-action'>
+            <a className='action' id='book-ride-action' onClick={() => setIsModalOpen(true)}>
               <img src={TestRideImage} alt='' width='500px' height='auto' />
-              <p className='action-text'>Book a Test Ride</p>
+              <p className='action-text'>Enquiry</p>
             </a>
           </div>
           <div className='book-drive-service'>
-            <a data-bs-toggle='modal' className='action' id='book-service-action'>
+            <a
+              data-bs-toggle='modal'
+              className='action'
+              id='book-service-action'
+              onClick={() => setIsServiceModalOpen(true)}
+            >
               <img src={ServieImage} alt='' width='500px' height='auto' />
               <p className='action-text'>Book your Bike Service</p>
             </a>
@@ -22,6 +32,19 @@ function ServicePage() {
         </div>
         <BookingBanner />
       </div>
+      {isModalOpen && (
+        <BikeEnquiryModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          bikeDetails={null}
+        />
+      )}
+      {isServiceModalOpen && (
+        <BookServiceModal
+          isOpen={isServiceModalOpen}
+          onClose={() => setIsServiceModalOpen(false)}
+        />
+      )}
     </>
   );
 }

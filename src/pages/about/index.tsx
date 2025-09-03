@@ -5,8 +5,11 @@ import Gallery2 from '../../assets/aboutUsPage/gallery-2.png';
 import Gallery3 from '../../assets/aboutUsPage/gallery-3.png';
 import Gallery4 from '../../assets/aboutUsPage/gallery-4.png';
 import Gallery5 from '../../assets/aboutUsPage/gallery-5.jpg';
+import { useState } from 'react';
+import BookServiceModal from '../../components/bookServiceModal';
 
 function AboutUsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className='about-us-page-container'>
@@ -44,7 +47,9 @@ function AboutUsPage() {
                   <span className='service-text'>simple steps</span>
                 </div>
                 <div className='d-flex justify-content-center w-100'>
-                  <button className='btn mt-3 w-75'>Book Now</button>
+                  <button className='btn mt-3 w-75' onClick={() => setIsModalOpen(true)}>
+                    Book Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -73,6 +78,9 @@ function AboutUsPage() {
           <Footer />
         </div>
       </div>
+      {isModalOpen && (
+        <BookServiceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      )}
     </>
   );
 }

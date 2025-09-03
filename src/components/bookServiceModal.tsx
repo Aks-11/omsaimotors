@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import type { BikeEnquiryModalProps } from '../schemas/bikeEnquiry';
-import { bikeData } from '../data/bikeData';
+import type { BookServiceModalProps } from '../schemas/bookService';
 
-const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bikeDetails }) => {
+const BookServiceModal: React.FC<BookServiceModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     number: '',
-    location: '',
+    date: '',
   });
   const [loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     if (!isOpen) {
-      setFormData({ name: '', number: '', location: '' });
+      setFormData({ name: '', number: '', date: '' });
     }
   }, [isOpen]);
 
@@ -26,12 +25,22 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    let formattedDate = formData.date;
+    if (formData.date) {
+      const dateObj = new Date(formData.date);
+      formattedDate = dateObj.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      });
+    }
+
     const payload = {
       messaging_product: 'whatsapp',
       to: `${import.meta.env.VITE_PHONE_NUMBER}`,
       type: 'template',
       template: {
-        name: 'bike_enquiry',
+        name: 'book_bike_service',
         language: { code: 'en' },
         components: [
           {
@@ -49,8 +58,8 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
               },
               {
                 type: 'text',
-                parameter_name: 'location',
-                text: formData.location,
+                parameter_name: 'date',
+                text: formattedDate,
               },
             ],
           },
@@ -89,14 +98,14 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
         onClick={onClose} // close when clicking outside
       >
         <div
-          className='modal-dialog modal-lg modal-dialog-centered'
+          className='modal-dialog modal modal-dialog-centered'
           role='document'
           onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside modal
         >
           <div className='modal-content rounded-3 shadow'>
             {/* Header */}
             <div className='modal-header'>
-              <div className='modal-title'>Enquire Now</div>
+              <div className='modal-title'>Book your Bike Service</div>
               <button
                 type='button'
                 className='btn-close'
@@ -108,20 +117,8 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
             {/* Body */}
             <div className='modal-body'>
               <div className='row'>
-                {/* Left Column - Image */}
-                <div className='col-md-6 text-center mb-md-0'>
-                  <img
-                    src={bikeDetails?.image ?? bikeData[0].image}
-                    alt={bikeDetails?.name ?? bikeData[0].name}
-                    className='img-fluid'
-                    style={{ maxHeight: '250px', objectFit: 'contain' }}
-                  />
-                  <h5 className='mt-2'>{bikeDetails?.name ?? bikeData[0].name}</h5>
-                  {<p className='text-muted'>{bikeDetails?.sub_name ?? bikeData[0].sub_name}</p>}
-                </div>
-
                 {/* Right Column - Form */}
-                <div className='col-md-6'>
+                <div className='col-md-12'>
                   <p className='text-muted mb-3'>Fill in the data to get a callback</p>
                   <form onSubmit={handleSubmit}>
                     <div className='mb-3'>
@@ -150,10 +147,9 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
 
                     <div className='mb-3'>
                       <input
-                        type='text'
-                        name='location'
-                        placeholder='Your area/location'
-                        value={formData.location}
+                        type='date'
+                        name='date'
+                        value={formData.date}
                         onChange={handleChange}
                         className='form-control'
                         required
@@ -174,7 +170,7 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
                         disabled={
                           !formData.name ||
                           !formData.number ||
-                          !formData.location ||
+                          !formData.date ||
                           loading ||
                           isSubmitted
                         }
@@ -207,4 +203,4 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
   );
 };
 
-export default BikeEnquiryModal;
+export default BookServiceModal;

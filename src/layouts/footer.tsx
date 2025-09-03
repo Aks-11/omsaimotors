@@ -2,46 +2,40 @@ import MapIcon from '../assets/icons/map-pin.svg';
 import WhatsappIcon from '../assets/icons/whatsapp.svg';
 import FacebookIcon from '../assets/icons/facebook.svg';
 import InstagramIcon from '../assets/icons/instagram.svg';
+import { useState } from 'react';
+import BookServiceModal from '../components/bookServiceModal';
+import { bikeData, parentBikeModelData } from '../data/bikeData';
 
 function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className='main-footer-container'>
       <div className='row footer-row'>
         <div className='col-6 col-lg-2 footer-col'>
           <h5 className='col-heading'>Motorcycles</h5>
           <ul className='footer-links'>
-            <li>
-              <a href='bikeslist.html' className='foot-link'>
-                Pulsar
-              </a>
-            </li>
-            <li>
-              <a href='bikeslist.html' className='foot-link'>
-                Dominar
-              </a>
-            </li>
-            <li>
-              <a href='bikeslist.html' className='foot-link'>
-                Avenger
-              </a>
-            </li>
-            <li>
-              <a href='bikeslist.html' className='foot-link'>
-                Platina
-              </a>
-            </li>
-            <li>
-              <a href='bikeslist.html' className='foot-link'>
-                CT
-              </a>
-            </li>
+            {parentBikeModelData.map((bike, index) => (
+              <li key={index}>
+                <a
+                  href={`./motorcycles/explore/${bikeData.find((b) => b.key.includes(bike.toLowerCase()))?.key}`}
+                  className='foot-link'
+                >
+                  {bike}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className='col-6 col-lg-2 footer-col'>
           <h5 className='col-heading'>Customer Service</h5>
           <ul className='footer-links'>
             <li>
-              <a href='#book-service-modal' data-bs-toggle='modal' className='foot-link'>
+              <a
+                href='#book-service-modal'
+                data-bs-toggle='modal'
+                className='foot-link'
+                onClick={() => setIsModalOpen(true)}
+              >
                 Book a Service
               </a>
             </li>
@@ -98,6 +92,9 @@ function Footer() {
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <BookServiceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      )}
     </div>
   );
 }
