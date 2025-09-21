@@ -31,7 +31,7 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
       to: `${import.meta.env.VITE_PHONE_NUMBER}`,
       type: 'template',
       template: {
-        name: 'bike_enquiry',
+        name: 'sales_enquiry',
         language: { code: 'en' },
         components: [
           {
