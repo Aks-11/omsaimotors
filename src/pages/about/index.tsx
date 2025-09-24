@@ -7,6 +7,7 @@ import Gallery4 from '../../assets/aboutUsPage/gallery-4.png';
 import Gallery5 from '../../assets/aboutUsPage/gallery-5.jpg';
 import { useState } from 'react';
 import BookServiceModal from '../../components/bookServiceModal';
+import { aboutUsText } from '../../data';
 
 function AboutUsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,15 +27,7 @@ function AboutUsPage() {
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-10 col-md-10 col-sm-12 col-12'>
               <div className='description-text mt-5'>
-                Welcome to Om Sai Motors, your premier destination for motorbike enthusiasts. We
-                offer a curated selection of top brands and pride ourselves on providing the best
-                bike service facility in town. Our expert technicians are passionate about
-                motorcycles and equipped with state-of-the-art tools to handle all your maintenance
-                and repair needs. From routine tune-ups to custom modifications, we ensure every
-                ride is safe and exhilarating. At Om sai motors, customer satisfaction is our
-                priority. We offer personalized service tailored to your needs, making every visit a
-                seamless and enjoyable experience. Whether you're shopping for a new bike or seeking
-                top-notch service, trust us to exceed your expectations.
+                {aboutUsText}
               </div>
             </div>
           </div>
