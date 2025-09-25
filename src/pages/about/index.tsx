@@ -7,7 +7,7 @@ import Gallery4 from '../../assets/aboutUsPage/gallery-4.png';
 import Gallery5 from '../../assets/aboutUsPage/gallery-5.jpg';
 import { useState } from 'react';
 import BookServiceModal from '../../components/bookServiceModal';
-import { aboutUsText } from '../../data';
+import { miscData } from '../../data';
 
 function AboutUsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +27,7 @@ function AboutUsPage() {
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-10 col-md-10 col-sm-12 col-12'>
               <div className='description-text mt-5'>
-                {aboutUsText}
+                {miscData.aboutUsText}
               </div>
             </div>
           </div>

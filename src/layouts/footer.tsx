@@ -5,7 +5,7 @@ import InstagramIcon from '../assets/icons/instagram.svg';
 import { useState } from 'react';
 import BookServiceModal from '../components/bookServiceModal';
 import { bikeData, parentBikeModelData } from '../data/bikeData';
-import { aboutUsText } from '../data';
+import { miscData } from '../data';
 
 function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,7 +66,9 @@ function Footer() {
           <h5 className='col-heading'>About Us</h5>
           <div className='about-us'>
             <p>
-              { aboutUsText.length > 250 ? aboutUsText.slice(0, 250) + '...' : aboutUsText }
+              {miscData.aboutUsText.length > 250
+                ? miscData.aboutUsText.slice(0, 250) + '...'
+                : miscData.aboutUsText}
             </p>
             <a href='../../about' id='about-us-btn'>
               View More
