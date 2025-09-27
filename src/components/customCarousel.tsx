@@ -42,7 +42,7 @@ function CustomCarousel({ items, isHomePage }: IProps) {
               <img
                 src={item.source}
                 alt={`Slide ${index + 1}`}
-                className={isHomePage ? 'home-page-slide' : ''}
+                className={isHomePage ? 'home-page-slide' : 'responsive-slide'}
               />
             ) : (
               <video
