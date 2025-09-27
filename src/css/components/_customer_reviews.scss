@@ -1,0 +1,44 @@
+.customer-reviews-container {
+  .reviews-heading {
+    font-weight: 700;
+    font-size: $fs-25;
+  }
+  .card {
+    height: 100%; /* ensures all cards stretch equally inside Bootstrap columns */
+  }
+  .review-text {
+    font-weight: 600;
+    font-size: $fs-16;
+    //
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* show only 3 lines initially */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+  }
+  .review-text.expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+  .read-more {
+    font-size: $fs-14;
+    text-decoration: underline;
+    cursor: pointer;
+    color: $blue-1e8;
+  }
+  .reviewer-info {
+    font-family: $secondary-font;
+    color: $grey-8c;
+    font-weight: 600;
+    font-size: $fs-16;
+  }
+  .bi-person-fill {
+    border: 0.5px solid $grey-8c;
+    border-radius: 50%;
+    padding: 0px 6px;
+  }
+  .star-icon {
+    color: $yellow;
+  }
+}

@@ -1,5 +1,5 @@
 import CustomCarousel from '../components/customCarousel';
-import { homePageCarouselData } from '../data';
+import { customerReviews, homePageCarouselData } from '../data';
 import MobilePhone from '../assets/homePage/mobile.png';
 import Calendar from '../assets/homePage/calendar.png';
 import Clock from '../assets/homePage/clock.png';
@@ -18,6 +18,7 @@ import BookingBanner from '../components/bookingBanner';
 import type { CarouselItem } from '../schemas/carousel';
 import { useState } from 'react';
 import BookServiceModal from '../components/bookServiceModal';
+import CustomerReviews from '../components/customerReviews';
 
 function Home() {
   const bannersContainerMob: CarouselItem[] = [
@@ -165,14 +166,20 @@ function Home() {
                 </div>
                 <div className='service-cta'>
                   <p className='description'>Get your best bike service with US</p>
-                  <button className='btn' onClick={() => setIsModalOpen(true)}>Book Now</button>
+                  <button className='btn' onClick={() => setIsModalOpen(true)}>
+                    Book Now
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className='mt-5'>
+        <div className='mt-3 p-4'>
+          <CustomerReviews customerReviews={customerReviews} />
+        </div>
+
+        <div className='mt-3'>
           <Footer />
         </div>
       </div>

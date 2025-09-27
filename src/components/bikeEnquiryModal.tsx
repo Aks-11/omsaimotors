@@ -20,6 +20,9 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+    if (name === 'number') {
+      if (value.length > 10 || Number(value) < 0) return;
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -138,9 +141,11 @@ const BikeEnquiryModal: React.FC<BikeEnquiryModalProps> = ({ isOpen, onClose, bi
 
                     <div className='mb-3'>
                       <input
-                        type='tel'
+                        type='number'
                         name='number'
-                        placeholder='Enter your phone number'
+                        max={9999999999}
+                        maxLength={10}
+                        placeholder='10 digit phone number'
                         value={formData.number}
                         onChange={handleChange}
                         className='form-control'

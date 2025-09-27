@@ -7,7 +7,8 @@ import Gallery4 from '../../assets/aboutUsPage/gallery-4.png';
 import Gallery5 from '../../assets/aboutUsPage/gallery-5.jpg';
 import { useState } from 'react';
 import BookServiceModal from '../../components/bookServiceModal';
-import { miscData } from '../../data';
+import { customerReviews, miscData } from '../../data';
+import CustomerReviews from '../../components/customerReviews';
 
 function AboutUsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,9 +27,7 @@ function AboutUsPage() {
           </div>
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-10 col-md-10 col-sm-12 col-12'>
-              <div className='description-text mt-5'>
-                {miscData.aboutUsText}
-              </div>
+              <div className='description-text mt-5'>{miscData.aboutUsText}</div>
             </div>
           </div>
           <div className='row d-flex justify-content-center'>
@@ -65,6 +64,9 @@ function AboutUsPage() {
                 <img src={Gallery5} className='img-fluid equal-img' alt='' />
               </div>
             </div>
+          </div>
+          <div className='mt-5'>
+            <CustomerReviews customerReviews={customerReviews} />
           </div>
         </div>
         <div className='mt-5'>
