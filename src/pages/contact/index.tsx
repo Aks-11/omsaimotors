@@ -2,6 +2,7 @@ import BookingBanner from '../../components/bookingBanner';
 import MapPinIcon from '../../assets/icons/map-pin.svg';
 import PhoneIcon from '../../assets/icons/call-icon.svg';
 import MailIcon from '../../assets/icons/mail.svg';
+import { miscData } from '../../data';
 
 function ContactUsPage() {
   return (
@@ -15,10 +16,7 @@ function ContactUsPage() {
                   <img src={MapPinIcon} alt='' width='20px' height='auto' className='me-3' />
                   <span>Address</span>
                 </div>
-                <p className='deets'>
-                  Main Road Saveri, Plot No. 22/31, opp. Modern School, Extension, Shahberi, Noida,
-                  Ghaziabad, Uttar Pradesh 201301
-                </p>
+                <p className='deets'>{miscData.address}</p>
               </div>
             </div>
             <div className='info-card-container'>
@@ -28,7 +26,7 @@ function ContactUsPage() {
                   <span>Contact us</span>
                 </div>
                 <p className='deets'>
-                  <a href='tel:+918368320977'>+91 8368320977</a>
+                  <a href={`tel:${miscData.phoneNumber}`}>{miscData.phoneNumber}</a>
                 </p>
               </div>
             </div>
@@ -39,7 +37,7 @@ function ContactUsPage() {
                   <span>Email</span>
                 </div>
                 <p className='deets'>
-                  <a href='mailto:omsaimotors@gmail.com'>omsaimotors@gmail.com</a>
+                  <a href={`mailto:${miscData.email}`}>{miscData.email}</a>
                 </p>
               </div>
             </div>

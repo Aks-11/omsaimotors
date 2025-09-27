@@ -5,6 +5,7 @@ import InstagramIcon from '../assets/icons/instagram.svg';
 import { useState } from 'react';
 import BookServiceModal from '../components/bookServiceModal';
 import { bikeData, parentBikeModelData } from '../data/bikeData';
+import { miscData } from '../data';
 
 function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -62,13 +63,14 @@ function Footer() {
           </ul>
         </div>
         <div className='col-12 col-lg-5 offset-lg-1'>
+          <h5 className='col-heading'>About Us</h5>
           <div className='about-us'>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea possimus earum in alias
-              placeat quis, commodi reiciendis? Fugiat, maiores. Rerum, velit. Suscipit ratione
-              nesciunt vel rerum atque vitae. Praesentium, mollitia.
+              {miscData.aboutUsText.length > 250
+                ? miscData.aboutUsText.slice(0, 250) + '...'
+                : miscData.aboutUsText}
             </p>
-            <a href='aboutus.html' id='about-us-btn'>
+            <a href='../../about' id='about-us-btn'>
               View More
             </a>
           </div>
@@ -77,7 +79,7 @@ function Footer() {
       <div className='social-links'>
         <div className='row social-row'>
           <div className='col-6 col-lg-2 copyright'>
-            <span>&copy;</span> 2024, Om sai motors
+            <span>&copy;</span> 2025, Om sai motors
           </div>
           <div className='col-6 col-lg-2 social-media'>
             <a href='' className='social-icon'>
