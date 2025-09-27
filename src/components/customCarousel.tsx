@@ -42,7 +42,7 @@ function CustomCarousel({ items, isHomePage }: IProps) {
               <img
                 src={item.source}
                 alt={`Slide ${index + 1}`}
-                className={isHomePage ? 'home-page-slide' : 'responsive-slide'}
+                className={`responsive-slide ${isHomePage ? 'home-page-slide' : ''}`}
               />
             ) : (
               <video
@@ -55,7 +55,7 @@ function CustomCarousel({ items, isHomePage }: IProps) {
                 loop
                 muted
                 playsInline
-                className='my-video-slide'
+                className='my-video-slide responsive-slide'
               ></video>
             )}
           </SwiperSlide>
