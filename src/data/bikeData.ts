@@ -11,7 +11,7 @@ export const bikeData: Bike[] = [
     carousel_images: [
       {
         type: 'image',
-      source: '/bikes/pulsar-n160/pulsar-sv-brake.png',
+        source: '/bikes/pulsar-n160/pulsar-sv-brake.png',
       },
       {
         type: 'image',
