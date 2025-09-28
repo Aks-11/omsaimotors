@@ -27,6 +27,7 @@ export type Bike = {
 export enum BrakingSystem {
   SingleChannelABS = 'Single Channel ABS',
   DualChannelABS = 'Dual Channel ABS',
+  CBS = 'CBS',
 }
 
 export enum TransmissionType {
@@ -37,4 +38,5 @@ export enum TransmissionType {
 export enum BrakeType {
   Disc = 'Disc',
   Drum = 'Drum',
+  DrumWithCBS = 'Drum with CBS',
 }
