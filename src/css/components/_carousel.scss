@@ -46,11 +46,23 @@
 
   @media (max-width: 768px) {
     .my-swiper {
-      .responsive-slide {
+      height: auto !important;
+      
+      .swiper-wrapper {
+        height: auto !important; /* allow wrapper to shrink */
+      }
+
+      .swiper-slide {
+        height: auto !important; /* important to override Swiper defaults */
+      }
+
+      .responsive-slide,
+      .home-page-slide,
+      .my-video-slide {
         width: 100%;
-        height: auto; /* important */
-        object-fit: contain; /* or cover depending on desired behavior */
-        max-height: 100%; /* optional */
+        height: auto !important; /* keep proportions */
+        object-fit: contain; /* show full image without cropping */
+        display: block;
       }
     }
   }
