@@ -9,6 +9,7 @@ function ContactUsPage() {
     <>
       <div className='contact-us-page-container'>
         <div className='main-wrapper'>
+          <div className='page-heading'>CONTACT US</div>
           <div className='info-container'>
             <div className='info-card-container'>
               <div className='info-card'>

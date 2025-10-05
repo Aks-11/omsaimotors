@@ -9,10 +9,7 @@ function BookingBanner() {
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   return (
     <>
-      <div
-        className={`booking-banner-container`}
-        // className={`booking-banner-container ${fixedBottomPosition ? 'fixed-position-bottom' : ''}`}
-      >
+      <div className={`booking-banner-container`}>
         <div className='act-btn'>
           <img src={EngineIcon} width='30' height='auto' className='me-3' />
           <span className='action-text' onClick={() => setIsServiceModalOpen(true)}>
