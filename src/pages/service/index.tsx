@@ -11,10 +11,13 @@ function ServicePage() {
   return (
     <>
       <div className='service-page-container'>
+        <div className='page-heading'>
+          <span>SERVICE</span>
+        </div>
         <div className='main-wrapper'>
           <div className='book-drive-service'>
             <a className='action' id='book-ride-action' onClick={() => setIsModalOpen(true)}>
-              <img src={TestRideImage} alt='' width='500px' height='auto' />
+              <img src={TestRideImage} alt='Enquiry' className='responsive-img' />
               <p className='action-text'>Enquiry</p>
             </a>
           </div>
@@ -25,7 +28,7 @@ function ServicePage() {
               id='book-service-action'
               onClick={() => setIsServiceModalOpen(true)}
             >
-              <img src={ServieImage} alt='' width='500px' height='auto' />
+              <img src={ServieImage} alt='Bike Service' className='responsive-img' />
               <p className='action-text'>Book your Bike Service</p>
             </a>
           </div>
