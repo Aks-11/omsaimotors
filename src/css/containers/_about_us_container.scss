@@ -3,7 +3,8 @@
     padding: 20px 40px;
     .page-heading {
       color: $grey-de;
-      font-size: $fs-38;
+      // font-size: $fs-38;
+      font-size: $fs-60;
       font-weight: 600;
     }
     .sub-heading {
@@ -43,6 +44,14 @@
       height: 372px;
       object-fit: cover;
       border-radius: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .padded-section {
+      .description-text {
+        padding: 20px 0px;
+      }
     }
   }
 }

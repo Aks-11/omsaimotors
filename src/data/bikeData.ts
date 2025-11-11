@@ -1,8 +1,121 @@
 import { BrakeType, BrakingSystem, TransmissionType, type Bike } from '../schemas/bike';
 
-export const bikeData: Bike[] = [
+const bikeDataRaw: Bike[] = [
   {
-    id: 1,
+    key: 'pulsar-125',
+    name: 'Pulsar 125',
+    starting_price: 77296,
+    image: '/bikes/pulsar-125/pulsar-125-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-125/pulsar-125-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-125/pulsar-125-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-125/pulsar-125-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-125/pulsar-125-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 11.5,
+      displacement: 124.4,
+      max_power: '11.64 PS @ 8500 rpm',
+      max_torque: '10.8 Nm @ 6500 rpm',
+      mileage: 50,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.CBS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 140,
+      seat_height: 790,
+      ground_clearance: 165,
+    },
+  },
+  {
+    key: 'pulsar-ns125',
+    name: 'Pulsar NS125',
+    starting_price: 92182,
+    image: '/bikes/pulsar-ns125/pulsar-ns125-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns125/pulsar-ns125-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns125/pulsar-ns125-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns125/pulsar-ns125-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns125/pulsar-ns125-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 12,
+      displacement: 124.45,
+      max_power: '11.8 PS @ 8500 rpm',
+      max_torque: '11 Nm @ 7000 rpm',
+      mileage: 50,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.CBS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 144,
+      seat_height: 805,
+      ground_clearance: 179,
+    },
+  },
+  {
+    key: 'pulsar-150',
+    name: 'Pulsar 150',
+    starting_price: 105333,
+    image: '/bikes/pulsar-150/pulsar-150-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-150/pulsar-150-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-150/pulsar-150-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-150/pulsar-150-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-150/pulsar-150-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 15,
+      displacement: 149.5,
+      max_power: '13.8 PS @ 8500 rpm',
+      max_torque: '13.25 Nm @ 6500 rpm',
+      mileage: 49,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 148,
+      seat_height: 785,
+      ground_clearance: 165,
+    },
+  },
+  {
     key: 'pulsar-n160',
     name: 'Pulsar N160',
     starting_price: 114053,
@@ -42,7 +155,120 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 2,
+    key: 'pulsar-ns200',
+    name: 'Pulsar NS200',
+    starting_price: 142225,
+    image: '/bikes/pulsar-ns200/pulsar-ns200-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns200/pulsar-ns200-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns200/pulsar-ns200-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns200/pulsar-ns200-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-ns200/pulsar-ns200-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 12,
+      displacement: 199.5,
+      max_power: '24.13 PS @ 9750 rpm',
+      max_torque: '18.74 Nm @ 8000 rpm',
+      mileage: 36,
+      transmission: TransmissionType.Speed6Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 158,
+      seat_height: 805,
+      ground_clearance: 168,
+    },
+  },
+  {
+    key: 'pulsar-rs200',
+    name: 'Pulsar RS200',
+    starting_price: 171802,
+    image: '/bikes/pulsar-rs200/pulsar-rs200-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-rs200/pulsar-rs200-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-rs200/pulsar-rs200-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-rs200/pulsar-rs200-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-rs200/pulsar-rs200-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 199.5,
+      max_power: '24.1 PS @ 9750 rpm',
+      max_torque: '18.7 Nm @ 8000 rpm',
+      mileage: 35,
+      transmission: TransmissionType.Speed6Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 167,
+      seat_height: 810,
+      ground_clearance: 157,
+    },
+  },
+  {
+    key: 'pulsar-220f',
+    name: 'Pulsar 220 F',
+    starting_price: 127682,
+    image: '/bikes/pulsar-220f/pulsar-220f-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/pulsar-220f/pulsar-220f-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-220f/pulsar-220f-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-220f/pulsar-220f-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/pulsar-220f/pulsar-220f-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 220,
+      max_power: '20.11 PS @ 8500 rpm',
+      max_torque: '18.55 Nm @ 7000 rpm',
+      mileage: 40,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 160,
+      seat_height: 795,
+      ground_clearance: 165,
+    },
+  },
+  {
     key: 'pulsar-n250',
     name: 'Pulsar N250',
     starting_price: 133765,
@@ -70,27 +296,102 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 3,
-    key: 'dominar-400',
-    name: 'Dominar 400',
-    starting_price: 239173,
-    image: '/bikes/dominar-400/dominar-sv-brake.png',
+    key: 'pulsar-ns400z',
+    name: 'Pulsar NS400Z',
+    starting_price: 185568,
+    image: '/bikes/pulsar-ns400z/pulsar-ns400z-sv-brake.png',
     carousel_images: [
       {
         type: 'image',
-        source: '/bikes/dominar-400/dominar-sv-brake.png',
+        source: '/bikes/pulsar-ns400z/pulsar-ns400z-sv-brake.png',
       },
       {
         type: 'image',
-        source: '/bikes/dominar-400/dominar-fv.png',
+        source: '/bikes/pulsar-ns400z/pulsar-ns400z-fv.png',
       },
       {
         type: 'image',
-        source: '/bikes/dominar-400/dominar-sv-gear.png',
+        source: '/bikes/pulsar-ns400z/pulsar-ns400z-sv-gear.png',
       },
       {
         type: 'image',
-        source: '/bikes/dominar-400/dominar-bv.png',
+        source: '/bikes/pulsar-ns400z/pulsar-ns400z-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 14,
+      displacement: 373,
+      max_power: '42.37 PS @ 8800 rpm',
+      max_torque: '35 Nm @ 6500 rpm',
+      mileage: 32.5,
+      transmission: TransmissionType.Speed6Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 174,
+      seat_height: 807,
+      ground_clearance: 168,
+    },
+  },
+  {
+    key: 'dominar-250',
+    name: 'Dominar 250',
+    starting_price: 177124,
+    image: '/bikes/dominar-250/dominar-250-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/dominar-250/dominar-250-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-250/dominar-250-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-250/dominar-250-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-250/dominar-250-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 248.8,
+      max_power: '26.63 PS @ 8500 rpm',
+      max_torque: '23.5 Nm @ 6500 rpm',
+      mileage: 32,
+      transmission: TransmissionType.Speed6Manual,
+      braking_system: BrakingSystem.DualChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Disc,
+      kerb_weight: 180,
+      seat_height: 800,
+      ground_clearance: 157,
+    },
+  },
+  {
+    key: 'dominar-400',
+    name: 'Dominar 400',
+    starting_price: 239173,
+    image: '/bikes/dominar-400/dominar-400-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-400-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-400-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-400-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/dominar-400/dominar-400-bv.png',
       },
     ],
     specifications: {
@@ -109,27 +410,64 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 4,
-    key: 'avenger-220-cruise',
-    name: 'Avenger 220 Cruise',
-    starting_price: 137340,
-    image: '/bikes/avenger-220/avenger-sv-brake.png',
+    key: 'avenger-street-160',
+    name: 'Avenger Street 160',
+    starting_price: 112100,
+    image: '/bikes/avenger-street-160/avenger-street-160-sv-brake.png',
     carousel_images: [
       {
         type: 'image',
-        source: '/bikes/avenger-220/avenger-sv-brake.png',
+        source: '/bikes/avenger-street-160/avenger-street-160-sv-brake.png',
       },
       {
         type: 'image',
-        source: '/bikes/avenger-220/avenger-fv.png',
+        source: '/bikes/avenger-street-160/avenger-street-160-fv.png',
       },
       {
         type: 'image',
-        source: '/bikes/avenger-220/avenger-sv-gear.png',
+        source: '/bikes/avenger-street-160/avenger-street-160-sv-gear.png',
       },
       {
         type: 'image',
-        source: '/bikes/avenger-220/avenger-bv.png',
+        source: '/bikes/avenger-street-160/avenger-street-160-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: 13,
+      displacement: 160,
+      max_power: '14.79 PS @ 8500 rpm',
+      max_torque: '13.7 Nm @ 7000 rpm',
+      mileage: 45,
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.SingleChannelABS,
+      front_brake_type: BrakeType.Disc,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 156,
+      seat_height: 737,
+      ground_clearance: 169,
+    },
+  },
+  {
+    key: 'avenger-cruise-220',
+    name: 'Avenger Cruise 220',
+    starting_price: 137340,
+    image: '/bikes/avenger-cruise-220/avenger-cruise-220-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/avenger-cruise-220/avenger-cruise-220-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger-cruise-220/avenger-cruise-220-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger-cruise-220/avenger-cruise-220-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/avenger-cruise-220/avenger-cruise-220-bv.png',
       },
     ],
     specifications: {
@@ -148,7 +486,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 5,
     key: 'platina-100',
     name: 'Platina 100',
     starting_price: 58233,
@@ -187,7 +524,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 6,
     key: 'ct-110x',
     name: 'CT 110X',
     starting_price: 67295,
@@ -225,6 +561,54 @@ export const bikeData: Bike[] = [
       ground_clearance: 170,
     },
   },
+  {
+    key: 'freedom-125',
+    name: 'Freedom',
+    starting_price: 90976,
+    image: '/bikes/freedom-125/freedom-125-sv-brake.png',
+    carousel_images: [
+      {
+        type: 'image',
+        source: '/bikes/freedom-125/freedom-125-sv-brake.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/freedom-125/freedom-125-fv.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/freedom-125/freedom-125-sv-gear.png',
+      },
+      {
+        type: 'image',
+        source: '/bikes/freedom-125/freedom-125-bv.png',
+      },
+    ],
+    specifications: {
+      fuel_capacity: '2 kg CNG Tank',
+      displacement: 125,
+      max_power: '9.3 PS @ 8000 rpm',
+      max_torque: '9.7 Nm @ 6000 rpm',
+      mileage: '90 km/kg',
+      transmission: TransmissionType.Speed5Manual,
+      braking_system: BrakingSystem.CBS,
+      front_brake_type: BrakeType.Drum,
+      rear_brake_type: BrakeType.Drum,
+      kerb_weight: 149,
+      seat_height: 825,
+      ground_clearance: 170,
+    },
+  },
 ];
 
-export const parentBikeModelData: string[] = ['Pulsar', 'Dominar', 'Avenger', 'Platina', 'CT'];
+// compute stable sequential ids based on array order
+export const bikeData: Bike[] = bikeDataRaw.map((b, idx) => ({ ...b, id: idx + 1 }));
+
+export const parentBikeModelData: string[] = [
+  'Pulsar',
+  'Dominar',
+  'Avenger',
+  'Platina',
+  'CT',
+  'Freedom',
+];

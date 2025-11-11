@@ -20,8 +20,8 @@ function ExploreBike() {
 
   useEffect(() => {
     if (bike) {
-      const next = bikeData.find((b) => b.id === bike.id + 1);
-      const prev = bikeData.find((b) => b.id === bike.id - 1);
+      const next = bikeData.find((b) => b.id === bike.id! + 1);
+      const prev = bikeData.find((b) => b.id === bike.id! - 1);
       next ? setNextBike(next) : setNextBike(null);
       prev ? setPrevBike(prev) : setPrevBike(null);
     }
@@ -99,7 +99,11 @@ function ExploreBike() {
                     </div>
                     <div className='spec-row'>
                       <div className='spec-label'>Mileage - ARAI</div>
-                      <div className='spec-value'>{bike?.specifications.mileage} kmpl</div>
+                      <div className='spec-value'>
+                        {typeof bike?.specifications.mileage === 'number'
+                          ? `${bike?.specifications.mileage} kmpl`
+                          : bike?.specifications.mileage}
+                      </div>
                     </div>
                     <div className='spec-row'>
                       <div className='spec-label'>Transmission</div>
@@ -107,7 +111,11 @@ function ExploreBike() {
                     </div>
                     <div className='spec-row'>
                       <div className='spec-label'>Fuel Tank Capacity</div>
-                      <div className='spec-value'>{bike?.specifications.fuel_capacity} litres</div>
+                      <div className='spec-value'>
+                        {typeof bike?.specifications.fuel_capacity === 'number'
+                          ? `${bike?.specifications.fuel_capacity} litres`
+                          : bike?.specifications.fuel_capacity}
+                      </div>
                     </div>
                   </div>
                   <div className='col-md-2 col-12'></div>

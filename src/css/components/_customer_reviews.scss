@@ -3,6 +3,21 @@
     font-weight: 700;
     font-size: $fs-25;
   }
+  /* Scrollable container */
+  .reviews-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+
+    /* Hide scrollbar (optional, for cleaner look) */
+    // &::-webkit-scrollbar {
+    // display: none;
+    // }
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+  }
   .card {
     height: 100%; /* ensures all cards stretch equally inside Bootstrap columns */
   }

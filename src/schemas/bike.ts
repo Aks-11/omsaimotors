@@ -1,7 +1,7 @@
 import type { CarouselItem } from './carousel';
 
 export type Bike = {
-  id: number;
+  id?: number;
   key: string;
   name: string;
   sub_name?: string;
@@ -9,11 +9,11 @@ export type Bike = {
   image: string;
   carousel_images: CarouselItem[];
   specifications: {
-    fuel_capacity: number;
+    fuel_capacity: number | string;
     displacement: number;
     max_power: string;
     max_torque: string;
-    mileage: number;
+    mileage: number | string;
     transmission: string;
     braking_system: string;
     front_brake_type: string;
