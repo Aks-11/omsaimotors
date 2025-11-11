@@ -6,8 +6,10 @@ import { useState } from 'react';
 import BookServiceModal from '../components/bookServiceModal';
 import { bikeData, parentBikeModelData } from '../data/bikeData';
 import { miscData } from '../data';
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
+  const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className='main-footer-container'>
@@ -18,7 +20,11 @@ function Footer() {
             {parentBikeModelData.map((bike, index) => (
               <li key={index}>
                 <a
-                  href={`./motorcycles/explore/${bikeData.find((b) => b.key.includes(bike.toLowerCase()))?.key}`}
+                  href={
+                    location.pathname.includes('explore')
+                      ? `./${bikeData.find((b) => b.key.includes(bike.toLowerCase()))?.key}`
+                      : `./motorcycles/explore/${bikeData.find((b) => b.key.includes(bike.toLowerCase()))?.key}`
+                  }
                   className='foot-link'
                 >
                   {bike}
@@ -46,13 +52,10 @@ function Footer() {
           <h5 className='col-heading'>Contact Us</h5>
           <ul className='footer-links'>
             <li>
-              <p className='foot-link'>
-                Plot No. 22, 31, opp. Modern School, Noida Extension, Shahberi, Noida, Ghaziabad,
-                Uttar Pradesh 201301
-              </p>
+              <p className='foot-link'>{miscData.address}</p>
             </li>
             <li>
-              <p className='foot-link'>+91 83683 20977</p>
+              <p className='foot-link'>{miscData.phoneNumber}</p>
             </li>
             <li className='location'>
               <a className='foot-link' href='../../contact'>
