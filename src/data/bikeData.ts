@@ -1,8 +1,7 @@
 import { BrakeType, BrakingSystem, TransmissionType, type Bike } from '../schemas/bike';
 
-export const bikeData: Bike[] = [
+export const bikeDataRaw: Bike[] = [
   {
-    id: 1,
     key: 'pulsar-125',
     name: 'Pulsar 125',
     starting_price: 77296,
@@ -41,7 +40,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 2,
     key: 'pulsar-ns125',
     name: 'Pulsar NS125',
     starting_price: 92182,
@@ -80,7 +78,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 3,
     key: 'pulsar-150',
     name: 'Pulsar 150',
     starting_price: 105333,
@@ -119,7 +116,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 4,
     key: 'pulsar-n160',
     name: 'Pulsar N160',
     starting_price: 114053,
@@ -159,7 +155,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 5,
     key: 'pulsar-ns200',
     name: 'Pulsar NS200',
     starting_price: 142225,
@@ -198,7 +193,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 6,
     key: 'pulsar-rs200',
     name: 'Pulsar RS200',
     starting_price: 171802,
@@ -237,7 +231,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 7,
     key: 'pulsar-220f',
     name: 'Pulsar 220 F',
     starting_price: 127682,
@@ -276,7 +269,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 8,
     key: 'pulsar-n250',
     name: 'Pulsar N250',
     starting_price: 133765,
@@ -304,7 +296,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 9,
     key: 'pulsar-ns400z',
     name: 'Pulsar NS400Z',
     starting_price: 185568,
@@ -343,7 +334,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 10,
     key: 'dominar-250',
     name: 'Dominar 250',
     starting_price: 177124,
@@ -382,7 +372,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 11,
     key: 'dominar-400',
     name: 'Dominar 400',
     starting_price: 239173,
@@ -421,7 +410,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 12,
     key: 'avenger-street-160',
     name: 'Avenger Street 160',
     starting_price: 112100,
@@ -460,7 +448,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 13,
     key: 'avenger-cruise-220',
     name: 'Avenger Cruise 220',
     starting_price: 137340,
@@ -499,7 +486,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 14,
     key: 'platina-100',
     name: 'Platina 100',
     starting_price: 58233,
@@ -538,7 +524,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 15,
     key: 'ct-110x',
     name: 'CT 110X',
     starting_price: 67295,
@@ -577,7 +562,6 @@ export const bikeData: Bike[] = [
     },
   },
   {
-    id: 16,
     key: 'freedom-125',
     name: 'Freedom',
     starting_price: 90976,
@@ -616,6 +600,9 @@ export const bikeData: Bike[] = [
     },
   },
 ];
+
+// compute stable sequential ids based on array order
+export const bikeData: Bike[] = bikeDataRaw.map((b, idx) => ({ ...b, id: idx + 1 }));
 
 export const parentBikeModelData: string[] = [
   'Pulsar',

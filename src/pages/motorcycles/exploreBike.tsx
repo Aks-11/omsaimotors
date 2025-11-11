@@ -20,8 +20,8 @@ function ExploreBike() {
 
   useEffect(() => {
     if (bike) {
-      const next = bikeData.find((b) => b.id === bike.id + 1);
-      const prev = bikeData.find((b) => b.id === bike.id - 1);
+      const next = bikeData.find((b) => b.id === bike.id! + 1);
+      const prev = bikeData.find((b) => b.id === bike.id! - 1);
       next ? setNextBike(next) : setNextBike(null);
       prev ? setPrevBike(prev) : setPrevBike(null);
     }

@@ -1,7 +1,7 @@
 import type { CarouselItem } from './carousel';
 
 export type Bike = {
-  id: number;
+  id?: number;
   key: string;
   name: string;
   sub_name?: string;
