@@ -1,6 +1,6 @@
 import { BrakeType, BrakingSystem, TransmissionType, type Bike } from '../schemas/bike';
 
-export const bikeDataRaw: Bike[] = [
+const bikeDataRaw: Bike[] = [
   {
     key: 'pulsar-125',
     name: 'Pulsar 125',
