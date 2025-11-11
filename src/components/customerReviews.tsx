@@ -18,7 +18,7 @@ function CustomerReviews({ customerReviews }: IProps) {
       <div className='d-flex justify-content-center align-items-center'>
         <div className='reviews-heading'>Customer Reviews</div>
       </div>
-      <div className='row mt-3'>
+      <div className='reviews-scroll'>
         {customerReviews.map((review) => {
           const isExpanded = expandedIds.includes(review.id);
           return (

@@ -33,7 +33,7 @@ function AboutUsPage() {
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-8 col-md-8 col-sm-12 col-12'>
               <div className='service-container'>
-                <div className=''>
+                <div className='text-center'>
                   <span className='service-text'>Book your Bike service slot in just</span>
                   <span className='highlight-text'>&nbsp;three&nbsp;</span>
                   <span className='service-text'>simple steps</span>
