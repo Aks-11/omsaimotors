@@ -10,12 +10,14 @@ import BikeEnquiryModal from '../../components/bikeEnquiryModal';
 function ExploreBike() {
   const { key } = useParams();
   const [bike, setBike] = useState<Bike | null>(null);
+  const [otherModels, setOtherModels] = useState<Bike[]>([]);
   const [nextBike, setNextBike] = useState<Bike | null>(null);
   const [prevBike, setPrevBike] = useState<Bike | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setBike(bikeData.find((b) => b.key === key) || null);
+    setOtherModels(bikeData.filter((b) => b.key !== key));
   }, [key]);
 
   useEffect(() => {
@@ -60,14 +62,14 @@ function ExploreBike() {
         </div>
         {bike && (
           <div className='price-and-enquiry'>
-            <div className='row'>
-              <div className='col-6'>
+            <div className='row gx-0'>
+              <div className='col-lg-6 col-md-12 col-12'>
                 <div className='showroom-price'>
                   <span className='title'>Ex-showroom Price</span>
                   <span className='price'>₹ {customFormatNumber(bike.starting_price)}</span>
                 </div>
               </div>
-              <div className='col-6'>
+              <div className='col-lg-6 col-md-12 col-12'>
                 <div className='btn-container'>
                   <button className='btn' onClick={() => setIsModalOpen(true)}>
                     Enquiry
@@ -79,8 +81,23 @@ function ExploreBike() {
         )}
 
         <div className='row justify-content-center gx-0'>
+          <div className='other-models'>
+            <div className='title'>Other Models</div>
+            <div className='models-wrapper'>
+              <div className='models-scroll-container'>
+                {otherModels.map((model) => (
+                  <div key={model.key} className='model-container'>
+                    {model.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='row justify-content-center gx-0'>
           <div className='col-md-10 col-12'>
-            <div className='bike-specifications mt-5'>
+            <div className='bike-specifications mt-4'>
               <h2 className='title'>Specifications</h2>
               <div className='specs-grid'>
                 <div className='row'>
