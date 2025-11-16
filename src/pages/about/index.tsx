@@ -18,8 +18,7 @@ function AboutUsPage() {
         <div className='padded-section'>
           <div className='page-heading'>ABOUT US</div>
           <div className='sub-heading'>
-            <span>Dedicated Teams,</span>
-            <br />
+            <span>Dedicated Teams, </span>
             <span>for your best bike service.</span>
           </div>
           <div className='hero-image-wrapper mt-4'>
@@ -27,7 +26,7 @@ function AboutUsPage() {
           </div>
           <div className='row d-flex justify-content-center'>
             <div className='col-lg-10 col-md-10 col-sm-12 col-12'>
-              <div className='description-text mt-5'>{miscData.aboutUsText}</div>
+              <div className='description-text'>{miscData.aboutUsText}</div>
             </div>
           </div>
           <div className='row d-flex justify-content-center'>
