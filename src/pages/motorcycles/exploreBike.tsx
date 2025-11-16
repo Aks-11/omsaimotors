@@ -86,9 +86,16 @@ function ExploreBike() {
             <div className='models-wrapper'>
               <div className='models-scroll-container'>
                 {otherModels.map((model) => (
-                  <div key={model.key} className='model-container'>
+                  <NavLink
+                    to={`/motorcycles/explore/${model.key}`}
+                    className='model-container'
+                    key={model.key}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}
+                  >
                     {model.name}
-                  </div>
+                  </NavLink>
                 ))}
               </div>
             </div>
