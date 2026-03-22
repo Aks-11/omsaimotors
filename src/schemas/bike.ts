@@ -31,6 +31,7 @@ export enum BrakingSystem {
 }
 
 export enum TransmissionType {
+  Speed4Manual = '4 Speed Manual',
   Speed5Manual = '5 Speed Manual',
   Speed6Manual = '6 Speed Manual',
 }
